@@ -1,0 +1,32 @@
+.layout-wall {
+	margin: 0 auto;
+}
+.layout-wall .item {
+	float: left;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+.layout-wall .item .inner {
+	padding: 5px;
+	margin: 5px;
+	overflow: hidden;
+}
+.layout-wall .item .inner img {
+	width: 100%;
+}
+.category-wall {
+	text-align: center;
+}
+.category-wall span {
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	display: inline-block;
+	cursor: pointer;
+}
+.layout-wall .displayNone {
+	display: none;
+}
+.layout-wall .displayBlock {
+	display: block;
+}

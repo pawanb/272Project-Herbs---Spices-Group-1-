@@ -1,0 +1,23 @@
+body {
+	text-align: center;
+}
+#frame {
+	width: 80%;
+	padding: 50px;
+	margin: auto;
+	font-size: 18px;
+	color: #666;
+}
+.inputbox {
+	padding: 8px; 
+}
+div.image,
+div.message {
+	margin: 30px;
+}
+#form-login .inputbox {
+	padding: 7px;
+	margin: 0 4px;
+	color: #999;
+	font-size: 14px;
+}

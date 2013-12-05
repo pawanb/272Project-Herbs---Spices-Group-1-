@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="search" method="upgrade">
+	<name>Search - CComment</name>
+	<author>Daniel Dimitrov</author>
+	<creationDate>2013-10-03</creationDate>
+	<copyright>Copyright (C) 2008 - 2013 compojoom.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>daniel@compojoom.com</authorEmail>
+	<authorUrl>https://compojoom.com</authorUrl>
+	<version>5.0.2</version>
+	<description>This plugin enables you to search comments through joomla's search</description>
+	<languages folder="administrator/language">
+		<language tag="en-GB">en-GB/en-GB.plg_search_ccomment.ini</language>
+	</languages>
+	<files>
+		<file plugin="ccomment">ccomment.php</file>
+	</files>
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic">
+				<field name="search_limit" type="text"
+					default="50"
+					description="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC"
+					label="JFIELD_PLG_SEARCH_SEARCHLIMIT_LABEL"
+					size="5"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

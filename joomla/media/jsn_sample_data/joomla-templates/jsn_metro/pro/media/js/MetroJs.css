@@ -1,0 +1,147 @@
+.live-tile {
+	height:100px;
+	margin: 0 0 10px;
+	outline: none;
+	padding: 0;
+	width: 100px;
+}
+.tile-strip,
+.live-tile,
+.list-tile,
+.copy-tile,
+.slide {
+	float: left;
+}
+.live-tile,
+.list-tile,
+.copy-tile {
+	color: #fff;
+	overflow: hidden;
+	position: relative;
+	z-index: 20;
+}
+.live-tile img,
+.list-tile img,
+.copy-tile img {
+	border: none;
+}
+.live-tile a:link,
+.list-tile a:link,
+.copy-tile a:link,
+.live-tile a:visited,
+.list-tile a:visited,
+.copy-tile a:visited {
+	color: #fff;
+	text-decoration: underline;
+}
+.live-tile a:hover,
+.list-tile a:hover,
+.copy-tile a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+.live-tile > div,
+.list-tile > div,
+.live-tile > .slide,
+.carousel > .slide,
+.live-tile > .slide-front,
+.live-tile > .slide-back,
+.live-tile > .flip-front,
+.live-tile > .flip-back {
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	position: absolute;
+	z-index: 20;
+}
+.list-tile > div {
+	position: relative;
+	background-color: transparent;
+}
+img.full,
+a.full,
+.live-tile .full,
+.list-tile .full {
+	display: block;
+	margin: 0px;
+	height: 100%;
+	text-decoration: none;
+	width: 100%;
+}
+.live-tile > .back,
+.live-tile > .slide-back,
+.live-tile > .flip-back,
+.flip-list .flip-back {
+	position: absolute;
+	z-index: 10;
+}
+.flip-list {
+	padding: 0px;
+	margin: 0px;
+}
+.list-tile .flip-list {
+	height: 100%;
+	width: 100%;
+}
+.flip-list > li > a {
+	border: none;
+	outline: none;
+	text-decoration: none;
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+}
+.flip-list > li img {
+	border: none;
+	outline: none;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+}
+.flip-list > li {
+	float: left;
+	list-style-type: none;
+	outline: none;
+	position: relative;
+}
+.flip-list > li > div {
+	border: none;
+	background: white;
+	height: 100%;
+	left: 0px;
+	margin: 0px;
+	overflow: hidden;
+	position: absolute;
+	padding: 0px;
+	top: 0px;
+	width: 100%;
+	z-index: 20;
+}
+.flip-list > li > div.flip-back {
+	height: 0px;
+}
+.live-tile.flip.ha,
+.flip-list.ha {
+	position: relative;
+	overflow: hidden;
+}
+.live-tile.flip .ha.flip-front,
+.flip-list .ha.flip-front,
+.live-tile.flip .ha.flip-back,
+.flip-list .ha.flip-back {
+	position: absolute;
+	z-index: 20;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.flip-list > li > .ha.flip-back,
+.flip-list > li > .ha.flip-back img {
+	margin: 0px !important;
+	height: 100%;
+}

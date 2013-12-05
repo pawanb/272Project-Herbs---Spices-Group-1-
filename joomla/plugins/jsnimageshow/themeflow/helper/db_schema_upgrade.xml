@@ -1,0 +1,38 @@
+<product name="Theme Flow" type="plugin">
+	<version number="1.0.0">
+		<release_date>5/6/2011</release_date>
+		<tables>
+			<table id="1" status="ADDED" name="#__imageshow_theme_flow">
+				<field id="1" status="ADDED" name="theme_id" type="int(11) unsigned" primary_key="yes"/>	
+				<field id="2" status="ADDED" name="image_source" type="char(150)"/>
+				<field id="3" status="ADDED" name="image_width" type="char(150)"/>	
+				<field id="4" status="ADDED" name="image_height" type="char(150)"/>											
+				<field id="5" status="ADDED" name="image_border_thickness" type="char(150)"/>
+				<field id="6" status="ADDED" name="image_border_rounded_corner" type="char(150)"/>				
+				<field id="7" status="ADDED" name="image_border_color" type="char(150)"/>
+				<field id="8" status="ADDED" name="image_effect" type="char(150)"/>
+				<field id="9" status="ADDED" name="transparency" type="char(150)"/>
+				<field id="10" status="ADDED" name="background_type" type="char(150)"/>
+				<field id="11" status="ADDED" name="background_color" type="char(150)"/>				
+				<field id="12" status="ADDED" name="container_side_fade" type="char(150)"/>			
+				<field id="13" status="ADDED" name="animation_duration" type="char(150)"/>
+				<field id="14" status="ADDED" name="click_action" type="char(150)"/>				
+				<field id="15" status="ADDED" name="open_link_in" type="char(150)"/>
+				<field id="16" status="ADDED" name="orientation" type="char(150)"/>
+				<field id="17" status="ADDED" name="enable_keyboard_action" type="char(150)"/>	
+				<field id="18" status="ADDED" name="enable_mouse_wheel_action" type="char(150)"/>
+				<field id="19" status="ADDED" name="show_caption" type="char(150)"/>										
+				<field id="20" status="ADDED" name="caption_background_color" type="char(150)"/>	
+				<field id="21" status="ADDED" name="caption_opacity" type="char(150)"/>	
+				<field id="22" status="ADDED" name="caption_show_title" type="char(150)"/>	
+				<field id="23" status="ADDED" name="caption_title_css" type="char(150)"/>	
+				<field id="24" status="ADDED" name="caption_show_description" type="char(150)"/>	
+				<field id="25" status="ADDED" name="caption_description_length_limitation" type="char(150)"/>	
+				<field id="26" status="ADDED" name="caption_description_css" type="char(150)"/>	
+				<field id="27" status="ADDED" name="auto_play" type="char(150)"/>	
+				<field id="28" status="ADDED" name="slide_timing" type="char(150)"/>	
+				<field id="29" status="ADDED" name="pause_on_mouse_over" type="char(150)"/>	
+			</table>							
+		</tables>
+	</version>	
+</product>

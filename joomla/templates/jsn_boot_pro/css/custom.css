@@ -1,0 +1,148 @@
+/**
+* @author    JoomlaShine.com http://www.joomlashine.com
+* @copyright Copyright (C) 2008 - 2011 JoomlaShine.com. All rights reserved.
+* @license   JoomlaShine.com Proprietary License
+*/
+/* ============================== CUSTOM CSS ============================== */
+/* ----- LATEST NEWS MODULE ----- */
+div.jsn-modulecontainer div.jsn-modulecontent ul.latestnews li a {
+	display: block;
+	line-height: 36px;
+	border-bottom: 1px dotted #CCC;
+	text-decoration: none;
+}
+#jsn-usermodules3 div.jsn-modulecontainer div.jsn-modulecontent ul.latestnews li a {
+	color: #FFF;
+	text-decoration: none;
+	border-color: rgba(255,255,255,0.2);
+	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+	transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+}
+#jsn-usermodules3 div.jsn-modulecontainer ul.latestnews li a:hover {
+	background-color: rgba(255,255,255,0.2);
+}
+div[class*=lightbox-] ul.latestnews li a,
+#jsn-usermodules3 div[class*=lightbox-] ul.latestnews li a {
+	color: rgba(0,0,0,0.6);
+	text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+	border-color: rgba(0,0,0,0.2);
+}
+div[class*=lightbox-] ul.latestnews li a:hover,
+#jsn-usermodules3 div[class*=lightbox-] ul.latestnews li a:hover {
+	background-color: rgba(255,255,255,0.4);
+}
+
+/* MODULE CHRISTMAS ICONS */
+div.typography-article .jsn-christmas-link-icon {
+	color: #555;
+}
+
+/* =============== DEMO ITEMS =============== */
+@media only screen and (max-width: 960px),
+(max-device-width: 960px) {
+	img.demo-merrychristmas {
+		max-width: none;
+	}
+}
+@media only screen and (max-width: 480px), (max-device-width: 480px) {
+	div.demo-frontpage-textblock {
+		clear: both;
+		padding: 20px 0 0 0 !important;
+	}
+}
+/* ----- FRONT PAGE ----- */
+div.demo-fp {
+	border-top: 1px solid #DDD;
+	border-bottom: 1px solid #DDD;
+	margin: 20px 0 0;
+	padding: 20px 0 40px;
+}
+h3.demo-fp-title {
+	font-size: 2.5em;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-family: Oswald;
+}
+/* ----- JSN IMAGESHOW ----- */
+.jsn-container {
+	text-align: left;
+}
+.jsn-gallery .box_skitter {
+	background-color: transparent;
+}
+.box_skitter .prev_button {
+	left: -50px !important;
+}
+.box_skitter .next_button {
+	right: -50px !important;
+}
+.jsn-gallery .box_skitter .image {
+	float: right;
+}
+.jsn-gallery .container_skitter .label_skitter {
+	float: left;
+	width: 40% !important;
+	max-width: 50%;
+	background: none;
+	top: 25%;
+	left: 50px;
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+.jsn-gallery .container_skitter .label_skitter p {
+	display: inline-block;
+	padding: 10px;
+	margin: 0;
+	color: #FFF !important;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+}
+.jsn-gallery .info_slide_dots {
+	left: 50px !important;
+	background: none !important;
+}
+.jsn-gallery .box_skitter .info_slide_dots .image_number {
+	width: 10px;
+	height: 10px;
+	background-color: #999 !important;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.8);
+}
+body.jsn-direction-rtl .jsn-gallery .box_skitter .info_slide_dots .image_number {
+		text-indent: 9999px;
+}
+.jsn-gallery .box_skitter .info_slide_dots .image_number_select {
+	background-color: #5a9ece !important;
+}
+@media only screen and (max-width: 480px), (max-device-width: 480px) {
+	p.jsn-themeslider-caption-title {
+	    font-size: 13px !important;
+	}
+	.label_skitter p.jsn-themeslider-caption-description {
+		font-size: 11px !important;
+	}
+	.box_skitter .info_slide_dots {
+		display: none !important;
+	}
+	.jsn-gallery .container_skitter .label_skitter {
+	    max-width: 98% !important;
+	    width: 100% !important;
+	    top: auto !important;
+	    bottom: 0;
+	    left: 2% !important;
+	}
+	.jsn-gallery .container_skitter .label_skitter p {
+		padding-top: 6px !important;
+	}
+	body.jsn-desktop-on-mobile .jsn-gallery .container_skitter .label_skitter {
+	    width: 40% !important;
+		max-width: 50% !important;
+	}
+	body.jsn-desktop-on-mobile p.jsn-themeslider-caption-title {
+	    font-size: 20px !important;
+	}
+	body.jsn-desktop-on-mobile .label_skitter p.jsn-themeslider-caption-description {
+		font-size: 14px !important;
+	}
+}

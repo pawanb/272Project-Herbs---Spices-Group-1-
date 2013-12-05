@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="3.0" type="template" client="site" method="upgrade">
+	<name>st_birdsign</name>
+	<creationDate>14 March 2013</creationDate>
+	<author>Neo</author>
+	<authorEmail>beautifultemplates@gmail.com</authorEmail>
+	<authorUrl>http://www.beautiful-templates.com</authorUrl>
+	<copyright>Copyright (C) 2005 - 2012 JoomAvatar All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.0.0</version>
+	<edition>free</edition>
+	<description>AVATAR_DREAM_DESCRIPTION</description>
+
+	<files>
+		<folder>core</folder>
+		<folder>html</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<folder>showcases</folder>
+		<folder>backgrounds</folder>
+		<folder>images</folder>
+		<folder>css</folder>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+	</files>
+
+	<positions>
+		<position>top</position>
+		<position>top-left</position>
+		<position>top-middle</position>
+		<position>top-right</position>
+		<position>tool</position>
+		<position>promo-top-left</position>
+		<position>promo-top-middle</position>
+		<position>promo-top-right</position>
+		<position>promo-bottom-left</position>
+		<position>promo-bottom-middle</position>
+		<position>promo-bottom-right</position>
+		<position>content-top</position>
+		<position>left-top</position>
+		<position>left-middle-2</position>
+		<position>left-middle-1</position>
+		<position>left-bottom</position>
+		<position>right-top</position>
+		<position>right-middle-1</position>
+		<position>right-middle-2</position>
+		<position>right-bottom</position>
+		<position>inner-left</position>
+		<position>inner-right</position>
+		<position>breadcrumbs</position>
+		<position>user-top</position>
+		<position>main-body-top</position>
+		<position>main-body-bottom</position>
+		<position>user-1</position>
+		<position>user-2</position>
+		<position>user-3</position>
+		<position>user-4</position>
+		<position>user-5</position>
+		<position>user-6</position>
+		<position>user-7</position>
+		<position>user-8</position>
+		<position>user-9</position>
+		<position>user-10</position>
+		<position>user-11</position>
+		<position>user-12</position>
+		<position>user-13</position>
+		<position>user-14</position>
+		<position>user-15</position>
+		<position>user-16</position>
+		<position>user-17</position>
+		<position>user-18</position>
+		<position>user-19</position>
+		<position>user-20</position>
+		<position>user-bottom</position>
+		<position>banner-top</position>
+		<position>banner-bottom</position>
+		<position>content-bottom</position>
+		<position>footer</position>
+		<position>footer-1</position>
+		<position>footer-2</position>
+		<position>footer-3</position>
+		<position>footer-4</position>
+		<position>footer-5</position>
+		<position>footer-6</position>
+		<position>footer-left</position>
+		<position>footer-middle</position>
+		<position>footer-right</position>
+		<position>bottom</position>
+		<position>stick-left-top</position>
+		<position>stick-left-middle</position>
+		<position>stick-left-bottom</position>
+		<position>stick-right-top</position>
+		<position>stick-right-middle</position>
+		<position>stick-right-bottom</position>
+		<position>full-1</position>
+		<position>full-2</position>
+		<position>full-3</position>
+		<position>full-4</position>
+		<position>full-5</position>
+		<position>full-6</position>
+	</positions>
+
+	<!-- 	For core templates, we also install/uninstall the language files in the core language folders. -->
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_st_birdsign.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_st_birdsign.sys.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params" addfieldpath="/templates/st_birdsign/core/elements/">
+			<fieldset name="GLOBAL">
+				<field name="about"  
+					type="avatarspace"
+					class="avatar-space"
+					template="st_birdsign"
+					label="AVATAR_TEMPLATE_CORE_ABOUT"
+					description="AVATAR_TEMPLATE_CORE_ABOUT_DESC"
+					/>	
+				<field name="about_infor"  
+					type="avatarabout"
+					class="avatar-space"
+					template="st_birdsign"
+					fullname="ST BirdSign J3"
+					version="1.0.0"
+					edition="free"
+					facebook="http://www.facebook.com/pages/Submit-Templates/388752121206936?ref=hl"
+					twitter="https://twitter.com/submittemplates"
+					support="http://www.beautiful-templates.com/index.php/forum"
+					homepage="http://www.beautiful-templates.com"
+					/>	
+				<field name="global"  
+					type="avatarspace"
+					class="avatar-space"
+					template="st_birdsign"
+					label="AVATAR_TEMPLATE_CORE_GLOBAL"
+					description="AVATAR_TEMPLATE_CORE_GLOBAL_DESC"
+					/>	
+				<field name="content"  
+					type="avatarassets"
+					template="st_birdsign"
+					/>	
+				<field disabled="true" name="google_analytics"  type="text" default=""
+					label="AVATAR_TEMPLATE_CORE_GOOGLE_ANALYTICS"
+					description="AVATAR_TEMPLATE_CORE_GOOGLE_ANALYTICS_DESC"
+					filter="string" />
+				<field name="copyright" type="radio" default="1"
+					class="btn-group"
+					label="AVATAR_TEMPLATE_CORE_COPYRIGHT"
+					description="AVATAR_TEMPLATE_CORE_COPYRIGHT_DESC"
+				>
+					<option value="1">JYES</option>
+					<option disabled="true" value="0">JNO</option>
+				</field>
+				<field name="template_panel_setting" type="radio" default="1"
+					class="btn-group"
+					label="AVATAR_TEMPLATE_CORE_PANEL_SETTING"
+					description="AVATAR_TEMPLATE_CORE_PANEL_SETTING_DESC"
+				>
+					<option value="1">JYES</option>
+					<option disabled="true" value="0">JNO</option>
+				</field>
+				
+				<field name="active_responsive" type="radio" default="0"
+					class="btn-group"
+					label="AVATAR_TEMPLATE_CORE_RESPONISVE_ACTIVE"
+					description="AVATAR_TEMPLATE_CORE_RESPONSIVE_ACTIVE_DESC"
+				>
+					<option disabled="true" value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="load_jquery" type="radio" default="1"
+					class="btn-group"
+					label="AVATAR_TEMPLATE_CORE_LOAD_JQUERY"
+					description="AVATAR_TEMPLATE_CORE_LOAD_JQUERY_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="template_showcase" type="folderlist" onchange="AvatarTemplateAdmin.changeShowcase();"
+					default="" label="AVATAR_TEMPLATE_CORE_SELECT_SHOWCASE"  description="AVATAR_TEMPLATE_CORE_SELECT_SHOWCASE_DESC"
+					directory="templates/st_birdsign/showcases"  hide_default="true"/>
+				<field name="template_background" type="avatarbackground" 
+					default="" label="AVATAR_TEMPLATE_CORE_SELECT_BACKGROUND"  description="AVATAR_TEMPLATE_CORE_SELECT_BACKGROUND_DESC"
+					template="st_birdsign"/>
+				<field name="doctype" type="list" default="5"
+					class="btn-group"
+					label="AVATAR_TEMPLATE_CORE_DOCTYPE"
+					description="AVATAR_TEMPLATE_CORE_DOCTYPE_DESC"
+				>
+					<option value="1">HTML5</option>
+					<option value="2">HTML 4.01 Strict</option>
+					<option value="3">HTML 4.01 Transitional</option>
+					<option value="4">HTML 4.01 Frameset</option>
+					<option value="5">HTML 1.0 Strict</option>
+					<option value="6">XHTML 1.0 Transitional</option>
+					<option value="7">XHTML 1.0 Frameset</option>
+					<option value="8">XHTML 1.1</option>
+				</field>
+			</fieldset>
+			<fieldset name="Content">
+				<field name="content"  
+					type="avatarspace"
+					class="avatar-space"
+					template="st_birdsign"
+					label="AVATAR_TEMPLATE_CORE_CONTENT"
+					description="AVATAR_TEMPLATE_CORE_CONTENT_DESC"
+					/>	
+				<field name="show_main_body" type="list" default="1"
+					label="AVATAR_TEMPLATE_CORE_SHOW_MAIN_BODY"
+					description="AVATAR_TEMPLATE_CORE_SHOW_MAIN_BODY_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="hide_menu_items" type="menuitem" 
+					multiple="multiple" 
+					size="20" 
+					default="0" 
+					label="AVATAR_TEMPLATE_CORE_HIDE_MENU_ITEMS" description="AVATAR_TEMPLATE_CORE_HIDE_MENU_ITEMS_DESC" >
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="show_message" type="list" default="1"
+					label="AVATAR_TEMPLATE_CORE_SHOW_MESSAGE"
+					description="AVATAR_TEMPLATE_CORE_SHOW_MESSAGE_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field addfieldpath="/administrator/components/com_content/models/fields"
+					name="404_article" type="modal_article"
+					label="AVATAR_TEMPLATE_CORE_404_PAGE"
+					description="AVATAR_TEMPLATE_CORE_404_PAGE_DESC"
+				/>
+				
+				<field name="404_itemid" 
+					type="text" size="6" default="" filter="int"
+					label="AVATAR_TEMPLATE_CORE_TEMPLATE_404_ITEMID" description="AVATAR_TEMPLATE_CORE_TEMPLATE_404_ITEMID_DESC" />
+				
+			</fieldset>
+			<fieldset name="Dimensions">
+				<field name="dimensions"  
+					type="avatarspace"
+					class="avatar-space"
+					template="st_birdsign"
+					label="AVATAR_TEMPLATE_CORE_DIMENSIONS"
+					description="AVATAR_TEMPLATE_CORE_DIMENSIONS_DESC"
+					/>	
+				<field name="template_width" 
+					type="text" size="6" default="960px" 
+					label="AVATAR_TEMPLATE_CORE_TEMPLATE_WIDTH" description="AVATAR_TEMPLATE_CORE_TEMPLATE_WIDTH_DESC" />
+				
+				<field name="avatar_header_block" 
+					type="list" default="block-default-width"
+					label="AVATAR_TEMPLATE_CORE_HEADER_BLOCK_WIDTH" description="AVATAR_TEMPLATE_CORE_HEADER_BLOCK_WIDTH_DESC">
+					<option value="block-default-width">AVATAR_TEMPLATE_CORE_DEFAULT_WIDTH</option>
+					<option value="block-max-width-100">100%</option>
+				</field>
+				
+				<field name="avatar_header_inside_block" 
+					type="list" default="block-default-width"
+					label="AVATAR_TEMPLATE_CORE_HEADER_INISDE_BLOCK_WIDTH" description="AVATAR_TEMPLATE_CORE_HEADER_INISDE_BLOCK_WIDTH_DESC">
+					<option value="block-default-width">AVATAR_TEMPLATE_CORE_DEFAULT_WIDTH</option>
+					<option value="block-max-width-100">100%</option>
+				</field>
+				
+				<field name="avatar_tool_block" 
+					type="list" default="block-default-width" 
+					label="AVATAR_TEMPLATE_CORE_TOOL_BLOCK_WIDTH" description="AVATAR_TEMPLATE_CORE_TOOL_BLOCK_WIDTH_DESC">
+					<option value="block-default-width">AVATAR_TEMPLATE_CORE_DEFAULT_WIDTH</option>
+					<option value="block-max-width-100">100%</option>
+				</field>
+				
+				<field name="avatar_body_top_block" 
+					type="list" default="block-default-width"
+					label="AVATAR_TEMPLATE_CORE_BODY_TOP_BLOCK_WIDTH" description="AVATAR_TEMPLATE_CORE_BODY_TOP_BLOCK_WIDTH_DESC">
+					<option value="block-default-width">AVATAR_TEMPLATE_CORE_DEFAULT_WIDTH</option>
+					<option value="block-max-width-100">100%</option>
+				</field>
+				
+				<field name="avatar_body_middle_block" 
+					type="list" default="block-default-width"
+					label="AVATAR_TEMPLATE_CORE_BODY_MIDDLE_BLOCK_WIDTH" description="AVATAR_TEMPLATE_CORE_BODY_MIDDLE_BLOCK_WIDTH_DESC">
+					<option value="block-default-width">AVATAR_TEMPLATE_CORE_DEFAULT_WIDTH</option>
+					<option value="block-max-width-100">100%</option>
+				</field>
+				
+				<field name="avatar_body_bottom_block" 
+					type="list" default="block-default-width"
+					label="AVATAR_TEMPLATE_CORE_BODY_BOTTOM_BLOCK_WIDTH" description="AVATAR_TEMPLATE_CORE_BODY_BOTTOM_BLOCK_WIDTH_DESC">
+					<option value="block-default-width">AVATAR_TEMPLATE_CORE_DEFAULT_WIDTH</option>
+					<option value="block-max-width-100">100%</option>
+				</field>
+					
+				<field name="avatar_footer_inside_block" 
+					type="list" default="block-default-width"
+					label="AVATAR_TEMPLATE_CORE_FOOTER_INSIDE_BLOCK_WIDTH" description="AVATAR_TEMPLATE_CORE_FOOTER_INSIDE_BLOCK_WIDTH_DESC">
+					<option value="block-default-width">AVATAR_TEMPLATE_CORE_DEFAULT_WIDTH</option>
+					<option value="block-max-width-100">100%</option>
+				</field>
+					
+				<field name="avatar_footer_block" 
+					type="list" default="block-default-width"
+					label="AVATAR_TEMPLATE_CORE_FOOTER_BLOCK_WIDTH" description="AVATAR_TEMPLATE_CORE_FOOTER_BLOCK_WIDTH_DESC">
+					<option value="block-default-width">AVATAR_TEMPLATE_CORE_DEFAULT_WIDTH</option>
+					<option value="block-max-width-100">100%</option>
+				</field>
+				<field name="avatar_full_1_block" 
+					type="list" default="block-default-width"
+					label="AVATAR_TEMPLATE_CORE_FULL_1_BLOCK_WIDTH" description="AVATAR_TEMPLATE_CORE_FULL_1_BLOCK_WIDTH_DESC">
+					<option value="block-default-width">AVATAR_TEMPLATE_CORE_DEFAULT_WIDTH</option>
+					<option value="block-max-width-100">100%</option>
+				</field>
+				<field name="avatar_full_2_block" 
+					type="list" default="block-default-width"
+					label="AVATAR_TEMPLATE_CORE_FULL_2_BLOCK_WIDTH" description="AVATAR_TEMPLATE_CORE_FULL_2_BLOCK_WIDTH_DESC">
+					<option value="block-default-width">AVATAR_TEMPLATE_CORE_DEFAULT_WIDTH</option>
+					<option value="block-max-width-100">100%</option>
+				</field>
+				<field name="avatar_full_3_block" 
+					type="list" default="block-default-width"
+					label="AVATAR_TEMPLATE_CORE_FULL_3_BLOCK_WIDTH" description="AVATAR_TEMPLATE_CORE_FULL_3_BLOCK_WIDTH_DESC">
+					<option value="block-default-width">AVATAR_TEMPLATE_CORE_DEFAULT_WIDTH</option>
+					<option value="block-max-width-100">100%</option>
+				</field>
+				<field name="avatar_full_4_block" 
+					type="list" default="block-default-width"
+					label="AVATAR_TEMPLATE_CORE_FULL_4_BLOCK_WIDTH" description="AVATAR_TEMPLATE_CORE_FULL_4_BLOCK_WIDTH_DESC">
+					<option value="block-default-width">AVATAR_TEMPLATE_CORE_DEFAULT_WIDTH</option>
+					<option value="block-max-width-100">100%</option>
+				</field>
+				<field name="avatar_full_5_block" 
+					type="list" default="block-default-width"
+					label="AVATAR_TEMPLATE_CORE_FULL_5_BLOCK_WIDTH" description="AVATAR_TEMPLATE_CORE_FULL_5_BLOCK_WIDTH_DESC">
+					<option value="block-default-width">AVATAR_TEMPLATE_CORE_DEFAULT_WIDTH</option>
+					<option value="block-max-width-100">100%</option>
+				</field>
+				<field name="avatar_full_6_block" 
+					type="list" default="block-default-width"
+					label="AVATAR_TEMPLATE_CORE_FULL_6_BLOCK_WIDTH" description="AVATAR_TEMPLATE_CORE_FULL_6_BLOCK_WIDTH_DESC">
+					<option value="block-default-width">AVATAR_TEMPLATE_CORE_DEFAULT_WIDTH</option>
+					<option value="block-max-width-100">100%</option>
+				</field>
+				
+				<field name="cols_width"  
+					type="avatarspace"
+					class="avatar-space"
+					template="st_birdsign"
+					label="AVATAR_TEMPLATE_CORE_POSITION_WIDTH"
+					description="AVATAR_TEMPLATE_CORE_POSITION_WIDTH_DESC" />		
+				
+				<field name="top_left" 
+					type="text" size="6" default="33.33" 
+					label="AVATAR_TEMPLATE_CORE_TOP_LEFT" description="AVATAR_TEMPLATE_CORE_TOP_LEFT_DESC" 
+					filter="float" />
+					
+				<field name="top_right" 
+					type="text" size="6" default="33.33" 
+					label="AVATAR_TEMPLATE_CORE_TOP_RIGHT" description="AVATAR_TEMPLATE_CORE_TOP_RIGHT_DESC" 
+					filter="float" />
+						
+				<field name="promo_top_left" 
+					type="text" size="6" default="33.33" 
+					label="AVATAR_TEMPLATE_CORE_PROMO_TOP_LEFT" description="AVATAR_TEMPLATE_CORE_PROMO_TOP_LEFT_DESC" 
+					filter="float" />
+					
+				<field name="promo_top_right"
+					type="text" size="6" default="33.33" 
+					label="AVATAR_TEMPLATE_CORE_PROMO_TOP_RIGHT" description="AVATAR_TEMPLATE_CORE_PROMO_TOP_RIGHT_DESC" 
+					filter="float" />
+					
+				<field name="promo_bottom_left" 
+					type="text" size="6" default="33.33" 
+					label="AVATAR_TEMPLATE_CORE_PROMO_BOTTOM_LEFT" description="AVATAR_TEMPLATE_CORE_PROMO_BOTTOM_LEFT_DESC" 
+					filter="float" />
+					
+				<field name="promo_bottom_right"
+					type="text" size="6" default="33.33" 
+					label="AVATAR_TEMPLATE_CORE_PROMO_BOTTOM_RIGHT" description="AVATAR_TEMPLATE_CORE_PROMO_BOTTOM_RIGHT_DESC" 
+					filter="float" />
+				
+				<field name="left"
+					type="text" size="6" default="23" 
+					label="AVATAR_TEMPLATE_CORE_POS_LEFT" description="AVATAR_TEMPLATE_CORE_POS_LEFT_DESC" 
+					filter="float" />
+					
+				<field name="right"
+					type="text" size="6" default="23" 
+					label="AVATAR_TEMPLATE_CORE_POS_RIGHT" description="AVATAR_TEMPLATE_CORE_POS_RIGHT_DESC" 
+					filter="float" />
+					
+				<field name="inner_left"
+					type="text" size="6" default="23" 
+					label="AVATAR_TEMPLATE_CORE_POS_INNER_LEFT" description="AVATAR_TEMPLATE_CORE_POS_INNER_LEFT_DESC" 
+					filter="float" />
+					
+				<field name="inner_right"
+					type="text" size="6" default="23" 
+					label="AVATAR_TEMPLATE_CORE_POS_INNER_RIGHT" description="AVATAR_TEMPLATE_CORE_POS_INNER_RIGHT_DESC" 
+					filter="float" />
+				
+				<field name="footer_left" 
+					type="text" size="6" default="33.33" 
+					label="AVATAR_TEMPLATE_CORE_FOOTER_LEFT" description="AVATAR_TEMPLATE_CORE_FOOTER_LEFT_DESC" 
+					filter="float" />
+				
+				<field name="footer_right" 
+					type="text" size="6" default="33.33" 
+					label="AVATAR_TEMPLATE_CORE_FOOTER_RIGHT" description="AVATAR_TEMPLATE_CORE_FOOTER_RIGHT_DESC" 
+					filter="float" />
+			</fieldset>
+			<fieldset name="Font_Color">
+				<field name="color_style"  
+					type="avatarspace"
+					class="avatar-space"
+					template="st_birdsign"
+					label="AVATAR_TEMPLATE_CORE_STYLE_AND_COLOR"
+					description="AVATAR_TEMPLATE_CORE_STYLE_AND_COLOR_DESC" />		
+				
+				<field name="link_color" 
+					type="avatarcolorpicker" size="10"  template="st_birdsign"
+					label="AVATAR_TEMPLATE_CORE_LINK_COLOR" description="AVATAR_TEMPLATE_CORE_LINK_COLOR_DESC"
+					filter="string"/>
+					
+				<field name="hover_color" 
+					type="avatarcolorpicker" size="10" template="st_birdsign" 
+					label="AVATAR_TEMPLATE_CORE_HOVER_COLOR" description="AVATAR_TEMPLATE_CORE_HOVER_COLOR_DESC"
+					filter="string"/>
+					
+				<field name="body_font" 
+					type="avatarfont" 
+					label="AVATAR_TEMPLATE_CORE_BODY_FONT" description="AVATAR_TEMPLATE_CORE_BODY_FONT_DESC"
+					/>
+				<field name="menu_font" 
+					type="avatarfont" 
+					label="AVATAR_TEMPLATE_CORE_MENU_FONT" description="AVATAR_TEMPLATE_CORE_MENU_FONT_DESC"
+					/>
+					
+				<field name="google_font"  
+					type="avatarspace"
+					class="avatar-space"
+					template="st_birdsign"
+					label="AVATAR_TEMPLATE_CORE_GOOGLE_FONT"
+					description="AVATAR_TEMPLATE_CORE_GOOGLE_FONT_DESC"
+					/>
+				
+				<field name="google_font_api" type="radio" default="0"
+					label="AVATAR_TEMPLATE_CORE_GOOGLE_FONT_API"
+					description="AVATAR_TEMPLATE_CORE_GOOGLE_FONT_API_DESC" >
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="google_font_api_key"
+					type="text" size="50" 
+					label="AVATAR_TEMPLATE_CORE_GOOGLE_FONT_API_KEY" description="AVATAR_TEMPLATE_CORE_GOOGLE_FONT_API_KEY_DES" 
+				/>
+				
+				<field name="google_font_content" 
+					type="avatargooglefont"
+					onchange="changeFont(this);"
+					label="AVATAR_TEMPLATE_CORE_GOOGLE_FONT_CONTENT" description="AVATAR_TEMPLATE_CORE_GOOGLE_FONT_CONTENT_DESC"
+					filter="string"/>
+			</fieldset>
+			<fieldset name="Utilities">
+				<field name="Customize Files"  
+					type="avatarspace"
+					class="avatar-space"
+					template="st_birdsign"
+					label="AVATAR_TEMPLATE_CORE_CUSTOMIZE_FILES"
+					description="AVATAR_TEMPLATE_CORE_CUSTOMIZE_FILES_DESC" />		
+				<field name="customize_css" 
+					type="textarea"
+					cols="30"
+					rows="5" 
+					label="AVATAR_TEMPLATE_CORE_CUSTOMIZE_CSS" description="AVATAR_TEMPLATE_CORE_CUSTOMIZE_CSS_DESC"
+					filter="string"/>
+				<field name="utilities"  
+					type="avatarspace"
+					class="avatar-space"
+					template="st_birdsign"
+					label="AVATAR_TEMPLATE_CORE_UTILITIES"
+					description="AVATAR_TEMPLATE_CORE_UTILITIES_DESC" />
+				<field name="go_to_top" type="radio" default="0"
+					class="btn-group"
+					label="AVATAR_TEMPLATE_CORE_GO_TO_TOP_BUTTON"
+					description="AVATAR_TEMPLATE_CORE_GO_TO_TOP_BUTTON_DESC"
+				>
+					<option disabled="true" value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="go_to_top_text" type="text" default=""
+					label="AVATAR_TEMPLATE_CORE_GO_TO_TOP_TEXT"
+					description="AVATAR_TEMPLATE_CORE_GO_TO_TOP_TEXT_DESC"
+				/>
+				<field name="go_to_top_css" 
+					type="textarea" 
+					cols="30"
+					rows="5"
+					label="AVATAR_TEMPLATE_CORE_GO_TO_TOP_CSS" description="AVATAR_TEMPLATE_CORE_GO_TO_TOP_CSS_DESC"
+					filter="string"/>
+				<field name="css3_effect" type="radio" default="0"
+					class="btn-group"
+					label="AVATAR_TEMPLATE_CORE_CSS3_EFFECT"
+					description="AVATAR_TEMPLATE_CORE_CSS3_EFFECT_DESC"
+				>
+					<option disabled="true" value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field disabled="true" name="css3_effect_scroll" type="textarea" default=".avatar-css3-effect-scroll" cols="30" rows="5"
+					label="AVATAR_TEMPLATE_CORE_CSS3_EFFECT_SCROLL"
+					description="AVATAR_TEMPLATE_CORE_CSS3_EFFECT_SCROLL_DESC"
+				/>	
+				<field name="optimize" type="list" default="0"
+					class="btn-group"
+					label="AVATAR_TEMPLATE_CORE_OPTIMIZE"
+					description="AVATAR_TEMPLATE_CORE_OPTIMIZE_DESC"
+				>
+					<option value="0">AVATAR_TEMPLATE_CORE_NO_OPTIMIZE</option>
+					<option value="1">AVATAR_TEMPLATE_CORE_OPTIMIZE_CSS</option>
+					<option value="2">AVATAR_TEMPLATE_CORE_OPTIMIZE_JAVASCRIPT</option>
+					<option value="3">AVATAR_TEMPLATE_CORE_OPTIMIZE_CSS_AND_JAVASCRIPT</option>
+					<option value="4">AVATAR_TEMPLATE_CORE_OPTIMIZE_CSS_AND_JAVASCRIPT_AND_GZIP</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

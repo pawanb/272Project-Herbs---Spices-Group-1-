@@ -1,0 +1,1 @@
+window.dhx_globalImgPath = "http://localhost/Joomla2.5/modules/mod_easytagcloud/fields/slider/imgs/";

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+
+	<fields name="global">
+		<fieldset name="basic"
+		          description="COM_COMMENT_BASIC_FIELDSET_DESC"
+		          label="COM_COMMENT_BASIC_FIELDSET_LABEL"
+				>
+			<field name="complete_uninstall" label="COM_COMMENT_COMPLETE_UNINSTALL_LABEL"
+			       description="COM_COMMENT_COMPLETE_UNINSTALL_DESC" type="list" default="0">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="comment_length_backend" label="COM_COMMENT_COMMENT_LENGTH_BACKEND_LABEL"
+			       description="COM_COMMENT_COMMENT_LENGTH_BACKEND_DESC" type="text" default="140">
+			</field>
+		</fieldset>
+
+		<fieldset name="mailqueue"
+		          description="COM_COMMENT_MAILQUEUE_FIELDSET_DESC"
+		          label="COM_COMMENT_MAILQUEUE_FIELDSET_LABEL"
+		          addfieldpath="/administrator/components/com_comment/models/fields"
+				>
+			<field type="cron" label="COM_COMMENT_MAILQUEUE_CRON_URL_LABEL" desc="COM_COMMENT_MAILQUEUE_CRON_URL_DESC" />
+			<field name="mailqueue_pageload" label="COM_COMMENT_MAILQUEUE_PAGELOAD_LABEL"
+			       description="COM_COMMENT_MAILQUEUE_PAGELOAD_DESC" type="list" default="1">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		</fieldset>
+
+		<fieldset name="security"
+		          description="COM_COMMENT_SECURITY_FIELDSET_DESC"
+		          label="COM_COMMENT_SECURITY_FIELDSET_LABEL"
+				>
+			<field name="censorship" label="COM_COMMENT_CENSORSHIP_LABEL"
+			       description="COM_COMMENT_CENSORSHIP_DESC" type="list" default="0">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="censorship_case_sensitive" label="COM_COMMENT_CENSORSHIP_CASE_LABEL"
+			       description="COM_COMMENT_CENSORSHIP_CASE_DESC" type="list">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field name="censorship_word_list" label="COM_COMMENT_CENSORSHIP_LIST_LABEL"
+			       description="COM_COMMENT_CENSORSHIP_LIST_DESC" type="textarea"
+			       default="nastybitch = nast***tch, motherfucker = moth****cker, fucking = fu**ing, twat, fisting, kokot = ko**t"/>
+
+			<field name="censorship_usergroup" label="COM_COMMENT_CENSORSHIP_USERGROUP_LABEL"
+			       description="COM_COMMENT_CENSORSHIP_USERGROUP_DESC" type="usergroup" multiple="multiple">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field type="spacer"/>
+
+			<field name="ban_list" label="COM_COMMENT_BAN_LIST_LABEL"
+			       description="COM_COMMENT_BAN_LIST_DESC" type="textarea"/>
+
+		</fieldset>
+
+		<fieldset name="backend" label="COM_COMMENT_CONFIG_BACKEND_HEADER_LABEL"
+		          description="COM_COMMENT_CONFIG_LIVE_UPFATE_HEADER_DESC">
+			<field name="downloadid" type="text" default="" size="30" label="COM_COMMENT_CONFIG_LIVE_UPDATE_DOWNLOAD_ID"
+			       description="COM_COMMENT_CONFIG_LIVE_UPDATE_DOWNLOAD_ID_DESC"/>
+		</fieldset>
+
+		<fieldset name="permissions"
+		          description="JCONFIG_PERMISSIONS_DESC"
+		          label="JCONFIG_PERMISSIONS_LABEL"
+				>
+
+			<field name="rules" type="rules"
+			       component="com_comment"
+			       filter="rules"
+			       validate="rules"
+			       label="JCONFIG_PERMISSIONS_LABEL"
+			       section="component"/>
+		</fieldset>
+	</fields>
+</config>

@@ -1,0 +1,45 @@
+.style-2 .category-wall span {
+	border: none;
+}
+.style-2 .layout-wall  .info {
+	position: absolute;
+	top: 10px;
+	bottom: 10px;
+	left: 10px;
+	right: 10px;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	
+	text-align: center;
+	padding: 25px 0;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	background: #ddd;
+}
+.style-2 .layout-wall  .info .title {
+	position: absolute;
+	top: 40%;
+	left: 0;
+	right: 0;
+	font-size: 16px;
+	text-align: center;
+	line-height: 120%;
+	margin: 0 0 5px;
+}
+.style-2 .layout-wall  .info .category {
+	position: absolute;
+	top: 55%;
+	left: 0;
+	right: 0;
+	font-size: 14px;
+	text-align: center;
+	font-style: italic;
+	line-height: 120%;
+}
+.style-2 .layout-wall .item > .inner:hover > .info {
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+}

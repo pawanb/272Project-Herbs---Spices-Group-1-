@@ -1,0 +1,20 @@
+.layout-wall .item .inner {
+	border: none;
+	border-radius: none;
+	box-shadow: none;
+	-webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+.layout-wall .item .inner:hover {
+	 -webkit-transform: rotate(-10deg);
+	     -moz-transform: rotate(-10deg);
+	       -o-transform: rotate(-10deg);
+	      -ms-transform: rotate(-10deg);
+	          transform: rotate(-10deg);
+}
+.image_caption {
+	display: none;
+}

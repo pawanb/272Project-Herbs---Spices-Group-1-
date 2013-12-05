@@ -1,0 +1,57 @@
+/* Custom Elastislide Styling */
+.themestrip-container {
+	margin: 0 auto;
+}
+.themestrip-container .elastislide-horizontal {
+	padding: 10px 40px;
+	margin: 10px;
+}
+
+.themestrip-container .elastislide-wrapper:before,
+.themestrip-container .elastislide-wrapper:after{
+	content: '';
+	position: absolute;
+	z-index: -2;
+	bottom: 15px;
+	left:  20px;
+	/*width: 50%;
+	height: 20%;*/
+	-webkit-transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);
+	-ms-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+}
+
+.themestrip-container .elastislide-wrapper:after {
+	right: 20px;
+	left: auto;
+	-webkit-transform: rotate(3deg);
+	-moz-transform: rotate(3deg);
+	-ms-transform: rotate(3deg);
+	-o-transform: rotate(3deg);
+	transform: rotate(3deg);
+}
+
+.themestrip-container .elastislide-vertical {
+	/*max-width: 170px;*/
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 37px 10px;
+}
+
+.themestrip-container .elastislide-vertical:before {
+	top: 30px;
+	bottom: 30px;
+	left: 0;
+	right: 0;
+	content: " ";
+	position: absolute;
+	z-index: -2;
+}
+
+.themestrip-container .elastislide-vertical:after {
+	content: " ";
+	position: absolute;
+	z-index: -2;
+}

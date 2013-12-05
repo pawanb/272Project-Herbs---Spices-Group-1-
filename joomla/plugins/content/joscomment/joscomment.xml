@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+	<name>Content - CComment</name>
+	<author>Daniel Dimitrov </author>
+	<creationDate>2013-10-03</creationDate>
+	<copyright>Copyright(C) Daniel Dimitrov All rights reserved!</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>services@compojoom.com</authorEmail>
+	<authorUrl>http://compojoom.com</authorUrl>
+	<version>5.0.2</version>
+	<description>You need to enable this plugin if you want to have comments in com_content or in virtuemart(com_virtuemart)</description>
+	<languages folder="administrator/language">
+		<language tag="en-GB">en-GB/en-GB.plg_content_joscomment.ini</language>
+	</languages>
+	<files>
+		<file plugin="joscomment">joscomment.php</file>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="support_com_content" type="radio" default="1"
+				       label="PLG_CONTENT_JOSCOMMENT_SUPPORT_COM_CONTENT_LABEL"
+				       description="PLG_CONTENT_JOSCOMMENT_SUPPORT_COM_CONTENT_DESC"
+						>
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="on_content_prepare" type="radio" default="0"
+				       label="PLG_CONTENT_JOSCOMMENT_ON_CONTENT_PREPARE_LABEL"
+				       description="PLG_CONTENT_JOSCOMMENT_ON_CONTENT_PREPARE_DESC"
+						>
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="support_com_virtuemart" type="radio" default="0"
+				       label="PLG_CONTENT_JOSCOMMENT_SUPPORT_COM_VIRTUEMART_LABEL"
+				       description="PLG_CONTENT_JOSCOMMENT_SUPPORT_COM_VIRTUEMART_DESC"
+						>
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="support_com_matukio" type="radio" default="0"
+				       label="PLG_CONTENT_JOSCOMMENT_SUPPORT_COM_MATUKIO_LABEL"
+				       description="PLG_CONTENT_JOSCOMMENT_SUPPORT_COM_MATUKIO_DESC"
+						>
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="printView" type="radio" default="0"
+				       label="PLG_CONTENT_JOSCOMMENT_PRINT_VIEW_LABEL"
+				       description="PLG_CONTENT_JOSCOMMENT_PRINT_VIEW_DESC"
+						>
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

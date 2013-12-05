@@ -1,0 +1,60 @@
+.style-1 .category-wall span {
+	border: none;
+}
+.style-1 .layout-wall  .info {
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+	padding: 25px 0;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.style-1 .layout-wall  .info .title {
+	font-size: 16px;
+	text-align: center;
+	line-height: 120%;
+	margin: 0 0 5px;
+}
+.style-1 .layout-wall  .info .category {
+	font-size: 14px;
+	text-align: center;
+	font-style: italic;
+	line-height: 120%;
+}
+.style-1 .layout-wall .item > .inner:hover > .info {
+	background: #eee;
+	padding: 30px 0;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.style-1 .layout-wall .item > .inner {
+	-webkit-transform: translate(0, 0);
+	-moz-transform: translate(0, 0);
+	-ms-transform: translate(0, 0);
+	-o-transform: translate(0, 0);
+	transform: translate(0, 0);
+	
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.style-1 .layout-wall .item > .inner:hover {
+	-webkit-transform: translate(0, -10px);
+	-moz-transform: translate(0, -10px);
+	-ms-transform: translate(0, -10px);
+	-o-transform: translate(0, -10px);
+	transform: translate(0, -10px);
+	
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+} 

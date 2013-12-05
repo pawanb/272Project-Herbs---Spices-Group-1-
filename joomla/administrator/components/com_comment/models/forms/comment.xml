@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="text" class="readonly" label="JGLOBAL_FIELD_ID_LABEL"
+		       description="JGLOBAL_FIELD_ID_DESC" size="10" default="0"
+		       filter="integer"
+		       readonly="true"/>
+
+		<field name="contentid" type="contentid" class="readonly" label="COM_COMMENT_CONTENT_ID_LABEL"
+		       description="COM_COMMENT_CONTENT_ID_DESC"
+		       default="0"
+		       required="true"
+		       filter="integer"
+				/>
+
+		<field name="component" type="ccommentplugins"
+		       label="COM_COMMENT_COMPONENT_FIELD_LABEL"
+		       description="COM_COMMENT_COMPONENT_FIELD_DESC"
+		       filter="string"
+		       class="inputbox" labelclass="control-label"/>
+
+		<field name="ip" type="text"
+		       label="COM_COMMENT_IP_LABEL" description="COM_COMMENT_COMPONENT_LABEL_DESC"
+		       filter="string"
+		       class="inputbox" size="20" labelclass="control-label"/>
+
+		<field name="userid" type="user"
+		       label="COM_CONTENT_FIELD_CREATED_BY_LABEL"
+		       description="COM_CONTENT_FIELD_CREATED_BY_DESC"
+		       filter="integer"
+		       labelclass="control-label"/>
+
+		<field name="date" type="calendar" label="COM_COMMENT_FIELD_CREATED_LABEL"
+		       description="COM_COMMENT_FIELD_CREATED_DESC" class="inputbox" size="22"
+		       format="Y-m-d H:i:s" filter="user_utc" labelclass="control-label"/>
+
+		<field name="name" type="text"
+		       label="COM_COMMENT_NAME_FIELD_LABEL" description="COM_COMMENT_NAME_FIELD_LABEL_DESC"
+		       filter="string"
+		       class="inputbox" size="20" labelclass="control-label"/>
+
+		<field
+				name="email"
+				type="email"
+				label="COM_COMMENT_EMAIL_FIELD_LABEL"
+				description="COM_COMMENT_EMAIL_FIELD_DESC"
+				filter="email"
+				size="30"
+				validate="email"/>
+
+		<field name="notify" type="list" label="COM_COMMENT_FIELD_NOTIFY_LABEL"
+		       description="COM_COMMENT_FIELD_NOTIFY_DESC" default="0"
+		       filter="integer">
+			<option value="1">
+				JYES
+			</option>
+			<option value="0">
+				JNO
+			</option>
+		</field>
+
+		<field name="comment" type="textarea" class="inputbox span6"
+		       label="COM_COMMENT_FIELD_COMMENT_LABEL"
+		       description="COM_COMMENT_FIELD_COMMENT_DESC"
+		       filter="raw" required="true" />
+
+		<field name="published" type="list" label="JSTATUS"
+		       description="JFIELD_PUBLISHED_DESC"
+		       filter="intval" size="1" default="1"
+				>
+			<option value="1">
+				JPUBLISHED
+			</option>
+			<option value="0">
+				JUNPUBLISHED
+			</option>
+		</field>
+
+		<field name="voting_yes" type="text" label="COM_COMMENT_FIELD_VOTING_YES_LABEL"
+		       description="COM_COMMENT_FIELD_VOTING_YES_DESC" size="10" default="0"
+		       filter="integer"
+				/>
+
+		<field name="voting_no" type="text" label="COM_COMMENT_FIELD_VOTING_NO_LABEL"
+		       description="COM_COMMENT_FIELD_VOTING_NO_DESC" size="10" default="0"
+		       filter="integer"
+				/>
+
+		<field name="parentid" type="text" label="COM_COMMENT_FIELD_PARENT_ID_LABEL"
+		       description="COM_COMMENT_FIELD_PARENT_ID_LABEL" size="10" default="0"
+		       filter="integer"
+				/>
+
+		<field name="unsubscribe_hash" type="text" label="COM_COMMENT_FIELD_UNPUBLISH_HASH_LABEL"
+
+		       description="COM_COMMENT_FIELD_UNPUBLISH_HASH_DESC" default="0"
+				/>
+		<field name="moderate_hash" type="text" label="COM_COMMENT_FIELD_MODERATOR_HASH_LABEL"
+
+		       description="COM_COMMENT_FIELD_MODERATOR_HASH_DESC" default="0"
+				/>
+	</fieldset>
+</form>

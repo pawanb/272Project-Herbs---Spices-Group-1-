@@ -1,0 +1,27 @@
+.layout-wall .item .inner .info{
+	margin-top: 10px;
+	color: #AD9C9C;
+	margin: -5px;
+	padding: 10px 10px;
+	background-color: #F2F0F0;
+	font-size: 11px;
+}
+.layout-wall .item .inner .info.image {
+	margin: 5px -5px -5px -5px;
+}
+.layout-wall .item .inner .info p,
+.layout-wall .item .inner .info h3{
+	font-size: 11px;
+	line-height: 1.35em;
+	color: #211922;
+}
+.layout-wall .item .inner .info h3 {
+	font-weight: bold;
+}
+.layout-wall .item .inner {
+	border-radius: 0;
+}
+.layout-wall .item .inner .image_caption {
+	text-align: center;
+	font-size: 11px;
+}

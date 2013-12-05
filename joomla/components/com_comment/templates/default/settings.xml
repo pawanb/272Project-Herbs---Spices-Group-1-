@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="template_params">
+		<fieldset name="template_params_basic" label="COM_COMMENT_TEMPLATE_PARAMS_BASIC_FIELDSET_LABEL">
+
+			<field name="emulate_bootstrap" label="COM_COMMENT_TEMPLATE_PARAMS_EMULATE_BOOTSTRAP_LABEL"
+			       description="COM_COMMENT_TEMPLATE_PARAMS_EMULATE_BOOTSTRAP_DESC" type="radio" class="btn-group" default="1">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field name="notify_users" label="NOTIFY_USERS_CAPTION"
+			       description="NOTIFY_USERS_HELP" type="radio" class="btn-group" default="1">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field name="pagination_position" label="COM_COMMENT_TEMPLATE_PARAMS_PAGINATION_POSITION_LABEL"
+			       description="COM_COMMENT_TEMPLATE_PARAMS_PAGINATION_POSITION_DESC" type="list" default="0">
+				<option value="0">COM_COMMENT_BOTTOM</option>
+				<option value="1">COM_COMMENT_TOP</option>
+				<option value="2">COM_COMMENT_BOTH</option>
+			</field>
+
+			<field name="form_position" label="COM_COMMENT_TEMPLATE_PARAMS_FORM_POSITION_LABEL"
+			       description="COM_COMMENT_TEMPLATE_PARAMS_FORM_POSITION_DESC" type="list" default="0">
+				<option value="0">COM_COMMENT_BOTTOM</option>
+				<option value="1">COM_COMMENT_TOP</option>
+			</field>
+
+			<field name="form_avatar" label="COM_COMMENT_TEMPLATE_PARAMS_SHOW_FORM_AVATAR_LABEL"
+			       description="COM_COMMENT_TEMPLATE_PARAMS_SHOW_FORM_AVATAR_DESC" type="radio" class="btn-group" default="1">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field name="form_ubb" label="COM_COMMENT_TEMPLATE_PARAMS_SHOW_FORM_UBB_LABEL"
+			       description="COM_COMMENT_TEMPLATE_PARAMS_SHOW_FORM_UBB_DESC" type="radio" class="btn-group" default="1">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field name="required_user" label="COM_COMMENT_TEMPLATE_PARAMS_REQUIRED_USER_LABEL"
+			       description="COM_COMMENT_TEMPLATE_PARAMS_REQUIRED_USER_DESC" type="radio" class="btn-group" default="0">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field name="required_email" label="COM_COMMENT_TEMPLATE_PARAMS_REQUIRED_EMAIL_LABEL"
+			       description="COM_COMMENT_TEMPLATE_PARAMS_REQUIRED_EMAIL_DESC" type="radio" class="btn-group" default="0">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field name="show_rss" label="RSS_CAPTION"
+			       description="RSS_HELP" type="radio" class="btn-group" default="0">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field name="show_search" type="radio" class="btn-group" default="0"
+			       label="NO_SEARCH_CAPTION"
+			       description="NO_SEARCH_HELP">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field name="preview_visible" type="radio" class="btn-group" default="0"
+			       label="PREVIEW_VISIBLE_CAPTION"
+			       description="PREVIEW_VISIBLE_HELP">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field name="preview_length" type="text" class="" default="80"
+			       label="PREVIEW_LENGTH_CAPTION"
+			       description="PREVIEW_LENGTH_HELP"/>
+			<field name="preview_lines" type="text" class="" default="5"
+			       label="PREVIEW_LINES_CAPTION"
+			       description="PREVIEW_LINES_HELP"/>
+		</fieldset>
+	</fields>
+</form>

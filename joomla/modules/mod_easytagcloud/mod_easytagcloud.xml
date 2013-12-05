@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+	<name>EasyTagCloud</name>
+	<author>Kee Huang</author>
+	<creationDate>May.2013</creationDate>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>huangqi@vip.163.com</authorEmail>
+	<authorUrl>www.joomlatonight.com</authorUrl>
+	<version>2.4</version>
+	<description>MOD_EASYTAGCLOUD_DESCRIPTION</description>
+	<files>
+		<filename module="mod_easytagcloud">mod_easytagcloud.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>tagcanvas.min.js</filename>		
+		<folder>tmpl</folder>
+		<folder>language</folder>
+		<folder>fields</folder>
+		<folder>language</folder>
+		<filename>mod_easytagcloud.xml</filename>
+	</files>
+	<config>
+	  <fields name="params" addfieldpath="/modules/mod_easytagcloud/fields">
+	    <fieldset name="GENERATIONOPTIONS">
+
+		<field 
+		       name="maxtags" 
+			   type="text" 
+			   default="30"  			   
+			   label="MOD_EASYTAGCLOUD_MAXTAGS" 
+			   description="MOD_EASYTAGCLOUD_MAXTAGS_DESCRIPTION" />			   
+
+		<field 
+		       name="blacklist"
+			   type="textarea"
+			   default="" 
+			   cols="50" 
+			   rows="4" 
+			   label="MOD_EASYTAGCLOUD_BLACKLIST"
+			   description="MOD_EASYTAGCLOUD_BLACKLIST_DESCRIPTION" />	   				
+		</fieldset>
+		
+		<field 
+		       name="moduleclass_sfx"
+			   type="text"
+			   default="" 
+			   label="MOD_EASYTAGCLOUD_MODULECLASSSFX" 
+			   description="MOD_EASYTAGCLOUD_MODULECLASSSFX_DESCRIPTION" />	
+		
+	    <fieldset name="STYLEOPTIONS">
+
+		<field 
+			   type="stylechanger" />	
+			   						   			 		   			 
+		<field
+			   name="styles"
+			   type="list"
+			   default="0"
+			   label="MOD_EASYTAGCLOUD_STYLES"
+			   onchange="changestyle(this.value)"
+			   description="MOD_EASYTAGCLOUD_STYLES_DESCRIPTION">
+					<option
+						value="0">MOD_EASYTAGCLOUD_STYLES_DEFAULT</option>
+					<option
+						value="1">MOD_EASYTAGCLOUD_STYLES_RED</option>
+					<option
+						value="2">MOD_EASYTAGCLOUD_STYLES_BLUE</option>			
+					<option
+						value="3">MOD_EASYTAGCLOUD_STYLES_GREEN</option>
+					<option
+						value="4">MOD_EASYTAGCLOUD_STYLES_BLACK</option>
+					<option
+						value="5">MOD_EASYTAGCLOUD_STYLES_GRAY</option>	
+					<option
+						value="6">MOD_EASYTAGCLOUD_STYLES_ORANGE</option>																										
+				</field>
+
+		<field
+			   name="tags_order"
+			   type="list"
+			   default="0"
+			   label="MOD_EASYTAGCLOUD_TAGSORDER"
+					description="MOD_EASYTAGCLOUD_TAGSORDER_DESCRIPTION">
+					<option
+						value="0">MOD_EASYTAGCLOUD_TAGSORDERBY_ALPHABET</option>
+					<option
+						value="1">MOD_EASYTAGCLOUD_TAGSORDERBY_FREQUENCEDESC</option>
+					<option
+						value="2">MOD_EASYTAGCLOUD_TAGSORDERBY_FREQUENCEASC</option>			
+					<option
+						value="3">MOD_EASYTAGCLOUD_TAGSORDERBY_RANDOMLY</option>									
+				</field>	
+					   			   		   
+		<field 
+		       name="maxfontsize" 
+			   type="slider" 
+			   default="28"  
+			   max="40"
+			   min="12"
+			   step="1" 			   
+			   label="MOD_EASYTAGCLOUD_MAXFONTSIZE" 
+			   description="MOD_EASYTAGCLOUD_MAXFONTSIZE_DESCRIPTION" />
+			   
+		<field 
+		       name="minfontsize" 
+			   type="slider" 
+			   default="10"  
+			   max="16"
+			   min="7"
+			   step="1" 				   
+			   label="MOD_EASYTAGCLOUD_MINFONTSIZE" 
+			   description="MOD_EASYTAGCLOUD_MINFONTSIZE_DESCRIPTION" />	  
+			   
+		<field
+			   name="bold"
+			   type="checkbox"
+			   default="0"
+			   value="1"
+			   label="MOD_EASYTAGCLOUD_BOLD"
+			   description="MOD_EASYTAGCLOUD_BOLD_DESCRIPTION">
+			   </field>			      
+			   
+		<field 
+		       name="googlefont" 
+			   type="text" 
+			   default=""  
+			   label="MOD_EASYTAGCLOUD_GOOGLEFONT" 
+			   description="MOD_EASYTAGCLOUD_GOOGLEFONT_DESCRIPTION" />  			   
+	    
+		<field 
+		       name="scriptsubset" 
+			   type="text" 
+			   default=""  
+			   label="MOD_EASYTAGCLOUD_SCRIPTSUBSET" 
+			   description="MOD_EASYTAGCLOUD_SCRIPTSUBSET_DESCRIPTION" /> 
+			   
+		<field
+			   name="googlefonteffect"
+			   type="list"
+			   default=""
+			   label="MOD_EASYTAGCLOUD_GOOGLEFONTEFFECT"
+					description="MOD_EASYTAGCLOUD_GOOGLEFONTEFFECT_DESCRIPTION">
+					<option
+						value="">None</option>					
+					<option
+						value="font-effect-anaglyph">Anaglyph</option>
+					<option
+						value="font-effect-brick-sign">Brick Sign</option>
+					<option
+						value="font-effect-canvas-print">Canvas Print</option>						
+					<option
+						value="font-effect-crackle">Crackle</option>	
+					<option
+						value="font-effect-decaying">Decaying</option>	
+					<option
+						value="font-effect-destruction">Destruction</option>	
+					<option
+						value="font-effect-distressed">Distressed</option>	
+					<option
+						value="font-effect-distressed-wood">Distressed Wood</option>	
+					<option
+						value="font-effect-emboss">Emboss</option>	
+					<option
+						value="font-effect-fire">Fire</option>	
+					<option
+						value="font-effect-fire-animation">Fire Animation</option>	
+					<option
+						value="font-effect-fragile">Fragile</option>	
+					<option
+						value="font-effect-grass">Grass</option>	
+					<option
+						value="font-effect-ice">Ice</option>	
+					<option
+						value="font-effect-mitosis">Mitosis</option>	
+					<option
+						value="font-effect-neon">Neon</option>	
+					<option
+						value="font-effect-outline">Outline</option>	
+					<option
+						value="font-effect-putting-green">Putting Green</option>		
+					<option
+						value="font-effect-scuffed-steel">Scuffed Steel</option>	
+					<option
+						value="font-effect-shadow-multiple">Shadow Multiple</option>	
+					<option
+						value="font-effect-splintered">Splintered</option>	
+					<option
+						value="font-effect-static">Static</option>	
+					<option
+						value="font-effect-stonewash">Stonewash</option>	
+					<option
+						value="font-effect-3d">Three Dimensional</option>	
+					<option
+						value="font-effect-3d-float">Three Dimensional Float</option>	
+					<option
+						value="font-effect-vintage">Vintage</option>		
+					<option
+						value="font-effect-wallpaper">Wallpaper</option>																																																																																																																																										
+				</field>
+							    		
+	
+		<field 
+		       name="tagscolor" 
+			   type="color" 
+			   default=""  
+			   label="MOD_EASYTAGCLOUD_TAGSCOLOR" 
+			   description="MOD_EASYTAGCLOUD_TAGSCOLOR_DESCRIPTION" />     
+			   
+		<field 
+		       name="tagshovercolor" 
+			   type="color" 
+			   default=""  
+			   label="MOD_EASYTAGCLOUD_TAGSHOVERCOLOR" 
+			   description="MOD_EASYTAGCLOUD_TAGSHOVERCOLOR_DESCRIPTION" />    
+
+		<field 
+		       name="tagsbgcolor" 
+			   type="color" 
+			   default=""  
+			   label="MOD_EASYTAGCLOUD_TAGSBGCOLOR" 
+			   description="MOD_EASYTAGCLOUD_TAGSBGCOLOR_DESCRIPTION" /> 
+			   
+		<field 
+		       name="tagshoverbgcolor" 
+			   type="color" 
+			   default=""  
+			   label="MOD_EASYTAGCLOUD_TAGSHOVERBGCOLOR" 
+			   description="MOD_EASYTAGCLOUD_TAGSHOVERBGCOLOR_DESCRIPTION" /> 			   
+			   	   
+		<field
+			   name="show_underline"
+			   type="radio"
+			   default="0"
+			   label="MOD_EASYTAGCLOUD_SHOWUNDERLINE"
+					description="MOD_EASYTAGCLOUD_SHOWUNDERLINE_DESCRIPTION">
+					<option
+						value="1">JSHOW</option>
+					<option
+						value="0">JHIDE</option>
+				</field>
+		
+		<field
+			   name="hover_show_underline"
+			   type="radio"
+			   default="0"
+			   label="MOD_EASYTAGCLOUD_HOVERSHOWUNDERLINE"
+					description="MOD_EASYTAGCLOUD_HOVERSHOWUNDERLINE_DESCRIPTION">
+					<option
+						value="1">JSHOW</option>
+					<option
+						value="0">JHIDE</option>
+				</field>
+
+		<field
+			   name="tags_align"
+			   type="list"
+			   default="0"
+			   label="MOD_EASYTAGCLOUD_TAGSALIGN"
+					description="MOD_EASYTAGCLOUD_TAGSALIGN_DESCRIPTION">
+					<option
+						value="0">MOD_EASYTAGCLOUD_TAGSALIGN_LEFT</option>
+					<option
+						value="1">MOD_EASYTAGCLOUD_TAGSALIGN_JUSTIFY</option>
+					<option
+						value="2">MOD_EASYTAGCLOUD_TAGSALIGN_RIGHT</option>						
+					<option
+						value="3">MOD_EASYTAGCLOUD_TAGSALIGN_CENTER</option>	
+				</field>	
+									
+		<field 
+		       name="line_height" 
+			   type="text" 
+			   default="24"  
+			   label="MOD_EASYTAGCLOUD_LINEHEIGHT" 
+			   description="MOD_EASYTAGCLOUD_LINEHEIGHT_DESCRIPTION" />    
+			  		
+		<field 
+		       name="horizontal_space" 
+			   type="text" 
+			   default="2"  
+			   label="MOD_EASYTAGCLOUD_HORIZONTALSPACE" 
+			   description="MOD_EASYTAGCLOUD_HORIZONTALSPACE_DESCRIPTION" />      
+
+		<field 
+		       name="tagspadding" 
+			   type="text" 
+			   default="2"  
+			   label="MOD_EASYTAGCLOUD_PADDING" 
+			   description="MOD_EASYTAGCLOUD_PADDING_DESCRIPTION" />   
+
+		<field 
+		       name="borderradius" 
+			   type="text" 
+			   default="0"  
+			   label="MOD_EASYTAGCLOUD_BORDERRADIUS" 
+			   description="MOD_EASYTAGCLOUD_BORDERRADIUS_DESCRIPTION" />  			   					   		
+
+	   <field
+			   name="searchwindow"
+			   type="list"
+			   default="0"
+			   label="MOD_EASYTAGCLOUD_SEARCHWINDOW"
+					description="MOD_EASYTAGCLOUD_SEARCHWINDOW_DESCRIPTION">
+					<option
+						value="0">MOD_EASYTAGCLOUD_SEARCHWINDOW_NEW</option>
+					<option
+						value="1">MOD_EASYTAGCLOUD_SEARCHWINDOW_SAME</option>
+				</field>	
+	
+		<field
+			   name="colorful_tags"
+			   type="radio"
+			   default="1"
+			   label="MOD_EASYTAGCLOUD_COLORFULTAGS"
+					description="MOD_EASYTAGCLOUD_COLORFULTAGS_DESCRIPTION">
+					<option
+						value="0">MOD_EASYTAGCLOUD_COLORFULTAGS_ENABLE</option>
+					<option
+						value="1">MOD_EASYTAGCLOUD_COLORFULTAGS_DISABLE</option>
+				</field>		
+								
+			   	   
+	</fieldset>
+	
+	<fieldset name="advanced">
+            	<field name="cache" type="list" default="0" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field name="cachemode" type="hidden" default="itemid" />
+   </fieldset>
+   </fields>
+  </config>
+</extension>

@@ -1,0 +1,68 @@
+.layer-effect-door .sequence-canvas > li.animate-out,
+.layer-effect-door .sequence-canvas > li.animate-in,
+.layer-effect-door .sequence-canvas > li {
+	-webkit-transition: all 1s;
+}
+.layer-effect-door .sequence-canvas > li .image {
+	top: 0; 
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+}
+.layer-effect-door .sequence-canvas > li .image img {
+  	width: 100%;
+
+	-webkit-transform: rotate(0);
+	-moz-transform: rotate(0);
+	-ms-transform: rotate(0);
+	-o-transform: rotate(0);
+	transform: rotate(0);
+	  
+	-webkit-transition: all 1.5s;
+	-moz-transition:all 1.5s;
+	-ms-transition:all 1.5s;
+	-o-transition:all 1.5s;
+	transition:all 1.5s;
+	transform-origin:10% 40%;
+}
+.layer-effect-door .sequence-canvas > li.animate-out .image img {
+	-webkit-transform: rotate(2deg) scale(0.98, 0.98);
+  	-moz-transform: rotate(2deg) scale(0.98, 0.98);
+  	-ms-transform: rotate(2deg) scale(0.98, 0.98);
+  	-o-transform: rotate(2deg) scale(0.98, 0.98);
+  	transform: rotate(2deg) scale(0.98, 0.98);
+  	
+	-webkit-transition:all 2s;
+	-moz-transition:all 2s;
+	-ms-transition:all 2s;
+	-o-transition:all 2s;
+	transition-duration:all 2s;
+}
+.layer-effect-door .sequence-canvas > li.animate-in .image img {
+	
+	-webkit-transform: rotate(0deg) scale(1.05, 1.05);
+  	-moz-transform: rotate(0deg) scale(1.05, 1.05);
+  	-ms-transform: rotate(0deg) scale(1.05, 1.05);
+  	-o-transform: rotate(0deg) scale(1.05, 1.05);
+  	transform: rotate(0deg) scale(1.05, 1.05);
+  	
+  	-webkit-transition:all 1.5s;
+  	-moz-transition:all 1.5s;
+  	-ms-transition:all 1.5s;
+  	-o-transition:all 1.5s;
+  	transition-duration:all 1.5s;	
+}
+.layer-effect-door .title,
+.layer-effect-door .content {
+	position: absolute;
+	top: 35%;
+	left: 0;
+	right: 0;
+	text-align: center;
+	width: 80%;
+	margin: auto;
+}
+.layer-effect-door .content {
+	top: 70%;
+}

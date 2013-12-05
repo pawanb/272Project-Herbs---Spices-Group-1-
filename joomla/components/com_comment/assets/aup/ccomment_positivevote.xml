@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alphauserpoints type="plugin">
+	<rule>CComment positive vote</rule>
+	<description>Assign points to the user who up votes a comment made with CComment</description>
+	<component>com_comment</component>
+	<category>fo</category>
+	<plugin_function>plgaup_ccomment_positive_vote</plugin_function>
+	<fixed_points>true</fixed_points>
+</alphauserpoints>

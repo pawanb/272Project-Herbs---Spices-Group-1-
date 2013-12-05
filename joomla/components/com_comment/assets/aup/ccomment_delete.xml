@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alphauserpoints type="plugin">
+	<rule>CComment delete comment</rule>
+	<description>Assign points to the user who deletes a comment in CComment</description>
+	<component>com_comment</component>
+	<category>fo</category>
+	<plugin_function>plgaup_ccomment_delete</plugin_function>
+	<fixed_points>true</fixed_points>
+</alphauserpoints>

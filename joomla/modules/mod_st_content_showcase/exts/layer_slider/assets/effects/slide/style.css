@@ -1,0 +1,26 @@
+.layer-effect-slide .sequence-prev {
+	top: -32px;
+	left: auto;
+	right: 45px;
+	height: 25px;
+	width: 25px;
+	background-position: 9px -182px;
+} 
+.layer-effect-slide .sequence-next {
+	top: -32px;
+	left: auto;
+	right: 9px;
+	height: 25px;
+	width: 25px;
+	background-position: 11px -111px;
+}
+.layer-effect-slide .sequence-prev:hover {
+	background-position: 8px -53px;
+} 
+.layer-effect-slide .sequence-next:hover {
+	background-position: 11px 8px;
+}
+.layer-effect-slide .column-inner {
+	padding: 0 10px 0 0;
+}
+

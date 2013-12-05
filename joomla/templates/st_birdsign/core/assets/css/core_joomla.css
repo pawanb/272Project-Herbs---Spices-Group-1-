@@ -1,0 +1,196 @@
+/* content */
+.formelm, .formelm-area {
+	margin: 5px 0;
+	clear: both;
+}
+.formelm label, .formelm-area label {
+	float: left;
+	width: 200px;
+}
+/* end content */
+
+/* Button */
+.formelm-buttons button {
+	float: right;
+}
+/*End Button */
+
+/* tool tip */
+.tip {
+	border:solid 1px #333;
+	background:#ffffcc;
+}
+.tip {
+	text-align: left;
+	padding: 3px;
+	max-width: 400px;
+}
+.tip-title {
+	font-weight: bold;
+}
+/* end tool tip */
+
+/* Start Articles */
+ul.actions {
+	float: right;
+}
+ul.actions li{
+	list-style: none;
+	margin: 0;
+	padding-right: 5px;
+	display: inline;
+}
+.article-info {
+	font-size: 11px;
+	float: left;
+}
+.article-info dd {
+	display: inline;
+	margin: 0;
+}
+.avatar-article-heading{
+	margin: 0 0 5px 0;
+}
+.blog .items-more h3 {
+	margin: 0 0 5px 0;
+}
+.items-leading {
+	border-bottom: 1px solid #ddd;
+}
+.items-row .item{
+	margin: 5px 0 15px;
+	border-bottom: 1px solid #ddd;
+	overflow: hidden;
+	padding: 0 10px;
+}
+.items-more {
+	clear: both;
+}
+.category th,
+.category th a:visited, 
+.category th a:link {
+	font-weight: bold;
+}
+tr[class*=cat-list] {
+	border-bottom: 1px solid #ccc;
+}
+tr[class*=cat-list] p {
+	margin: 0;
+}
+.categories-list li {
+	padding: 5px;
+	border-bottom: 1px solid #ccc;
+}
+.categories-list li.last {
+	border-bottom: none;
+}
+.categories-list dl {
+	margin: 0;
+}
+.categories-list dt, .categories-list dd {
+	display: inline;
+} 
+/* End Articles */
+
+/* NAV */
+ul.pagenav {
+	margin: 0;
+}
+ul.pagenav li {
+	margin: 0;
+	list-style: none;
+}
+ul.pagenav li.pagenav-prev {
+	float: left;
+}
+ul.pagenav li.pagenav-next {
+	float: right;
+}
+.pagination ul{
+	text-align: center;
+}
+.pagination ul li {
+	list-style: none;
+	display: inline;
+	margin: 5px;
+}
+.pagination ul li:first-child {
+	float: left;
+	margin: 0 0 0 10px;
+}
+.pagination ul li:last-child {
+	float: right;
+	margin: 0 10px 0 0;
+}
+.pagination ul li.pagination-end {
+	float: none;
+	margin: 0 0 0 10px;
+}
+.pagination ul li.pagination-start {
+	float: none;
+	margin: 0 0 0 10px;
+}
+.pagination .counter {
+	text-align: center;
+	margin: 0 0 5px;
+}
+/* End NAV */
+
+/* Start Breadcrumbs */
+.breadcrumbs img {
+	padding: 0 0 5px 0;
+}
+/* End Breadcrumbs */
+
+/* System error */
+#system-message-container {
+	margin: 10px;
+}
+/* End System Error*/
+
+/* Search */
+.search #search-searchword {
+	margin: 0;
+}
+.search .only input,
+.search .phrases-box input {
+	vertical-align: top;
+}
+.search .only label,
+.search .phrases-box label {
+	display: inline;
+	margin: 0 5px 0 7px;
+}
+.result-created {
+	margin: 0 0 10px 0;
+}
+.finder .word {
+	margin: 5px 0;
+}
+.finder .word .inputbox {
+	margin: 0;
+}
+/* End Search */
+
+/* Contact */
+.pane-sliders .panel {
+	margin: 0 0 5px 0;
+}
+.pane-sliders h3.title a {
+	padding: 0 8px;
+	display: block;
+	margin: 0;
+	background: #161616;
+	font-size: 12px;
+}
+.pane-sliders h3.title,
+.pane-sliders h3.title a:visited, 
+.pane-sliders h3.title a:link {
+	color: #919191;
+	font-weight: bold;
+}
+.pane-sliders .pane-slider {
+	padding: 10px;
+	margin: 10px;
+}
+/* End Contact */

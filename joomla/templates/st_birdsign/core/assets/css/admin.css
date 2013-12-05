@@ -1,0 +1,36 @@
+ul.adminformlist li label.avatar-space {
+	background: url("../images/admin/bg.png") no-repeat scroll right center #368DA0;
+    border-radius: 0 0 5px 5px;
+    border-top: 5px solid #000000;
+    color: #FFFFFF;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin: 10px 0 15px -10px;
+    max-width: 100%;
+    padding: 5px 10px 10px;
+    text-align: center;
+    text-shadow: 0 2px 3px #555555;
+    width: 100%;
+}
+ul ul.avatar-template-core-about li{
+	padding: 5px 0;
+}
+#jform_params_load_exts {
+	width: 200px;
+}
+body .pane-sliders .panel h3 {
+	background: #fafafa;
+	color: #666;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+body .pane-sliders .panel {
+	border: none;
+}
+body input,
+body select,
+body textarea {
+	padding: 5px 8px;
+	border-radius: 5px;
+}

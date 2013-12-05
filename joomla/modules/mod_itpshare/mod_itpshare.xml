@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>MOD_ITPSHARE</name>
+	<author>Todor Iliev</author>
+	<copyright>Copyright (C) 2013 Todor Iliev ( ITPrism.com )</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html</license>
+	<authorEmail>todor@itprism.com</authorEmail>
+	<authorUrl>http://itprism.com</authorUrl>
+	<version>2.6</version>
+    <creationDate>21 October, 2013</creationDate>
+	<description><![CDATA[
+    <p><a href="http://itprism.com/free-joomla-extensions/social-marketing-seo/socialmedia-multi-share" target="_blank">ITPShare</a> is an extension that adds republish buttons, widgets or goodies on your site. There are social plugins of Twitter, Facebook, LinkedIn, StumbleUpon, Google Plus, Google Share, Thumblr, Pinterest, BufferApp,... It will help you to find more readers for your publications.</p>
+    <p><a href='http://itprism.com/help/30-itpshare-documentation-faq' target='_blank'>Read documentation</a> that will help you to setup the extensions.</p>
+    <p>Invest in the extension improvement. You can <a href="http://itprism.com/sponsorship" target="_blank">sponsor the extension via SMS, PayPal or Bitcoin</a>.<p>
+    <p><a href="http://itprism.com/" target="_blank">Subscribe for the newsletter</a> to receive <strong>gifts</strong>, <strong>discount codes</strong>, information about <strong>updates</strong> and information about <strong>new ITPrism extensions</strong>.</p>
+    <p>Please, <a href="http://extensions.joomla.org/extensions/social-web/social-share/social-multi-share/15665" target="_blank">vote for the extension</a> on Joomla! Extensions Directory</p>
+    ]]></description>
+	
+	<languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.mod_itpshare.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_itpshare.sys.ini</language>
+    </languages> 
+    
+	<files>
+		<filename module="mod_itpshare">mod_itpshare.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>shorturl.php</filename>
+		<filename>style.css</filename>
+		<filename>README.md</filename>
+		<folder>tmpl</folder>
+	</files>
+
+    <help url="MOD_ITPSHARE_HELP_URL"/>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+                
+                <field name="loadCss" type="radio" default="1" label="MOD_ITPSHARE_ITPSHARE_LOAD_STYLE_CSS" description="MOD_ITPSHARE_ITPSHARE_LOAD_STYLE_CSS_DESC" class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="dynamicLocale" type="radio" default="0" label="MOD_ITPSHARE_ITPSHARE_AUTO_LANGUAGE" description="MOD_ITPSHARE_ITPSHARE_AUTO_LANGUAGE_DESC" class="btn-group">
+                     <option value="0">JNO</option>
+                     <option value="1">JYES</option>
+                </field>
+                
+			</fieldset>
+
+            <fieldset name="twitter_section" label="MOD_ITPSHARE_TWITTER_SETTINGS">
+                <field name="twitterButton" type="radio" default="0" label="MOD_ITPSHARE_DISPLAY_BUTTON" description="MOD_ITPSHARE_DISPLAY_BUTTON_DESC" class="btn-group">
+                   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
+                </field>
+                <field name="twitterName" type="text" default="" size="80" label="MOD_ITPSHARE_TWITTER_NAME" description="MOD_ITPSHARE_TWITTER_NAME_DESC" />
+                <field name="twitterRecommend" type="text" default="" size="80" label="MOD_ITPSHARE_TWITTER_RECOMMEND" description="MOD_ITPSHARE_TWITTER_RECOMMEND_DESC" />
+                <field name="twitterHashtag" type="text" default="" size="80" label="MOD_ITPSHARE_TWITTER_HASHTAGS" description="MOD_ITPSHARE_TWITTER_HASHTAGS_DESC" />
+                <field name="twitterSize" type="list" default="small" label="MOD_ITPSHARE_TWITTER_SIZE" description="MOD_ITPSHARE_TWITTER_SIZE_DESC" >
+                   <option value="small">MOD_ITPSHARE_SMALL</option>
+                   <option value="large">MOD_ITPSHARE_LARGE</option>
+                </field>
+                <field name="twitterCounter" type="list" default="horizontal" label="MOD_ITPSHARE_TWITTER_COUNTER" description="MOD_ITPSHARE_TWITTER_COUNTER_DESC" >
+                   <option value="none">JHIDE</option>
+                   <option value="vertical">MOD_ITPSHARE_VERTICAL</option>
+                   <option value="horizontal">MOD_ITPSHARE_HORIZONTAL</option>
+                </field>
+                <field name="twitterLanguage" type="list" default="en" label="MOD_ITPSHARE_TWITTER_LANGUAGE" description="MOD_ITPSHARE_TWITTER_LANGUAGE_DESC" >
+                   <option value="ar">MOD_ITPSHARE_ARABIC</option>
+                   <option value="eu">MOD_ITPSHARE_BASQUE</option>
+                   <option value="ca">MOD_ITPSHARE_CATALAN</option>
+                   <option value="zh-cn">MOD_ITPSHARE_CHINESE_ZH</option>
+                   <option value="zh-tw">MOD_ITPSHARE_CHINESE_TW</option>
+                   <option value="cs">MOD_ITPSHARE_CZECH</option>
+                   <option value="da">MOD_ITPSHARE_DANISH</option>
+                   <option value="nl">MOD_ITPSHARE_DUTCH</option>
+                   <option value="en">MOD_ITPSHARE_ENGLISH</option>
+                   <option value="fa">MOD_ITPSHARE_FARSI</option>
+                   <option value="fil">MOD_ITPSHARE_FILIPINO</option>
+                   <option value="fr">MOD_ITPSHARE_FRENCH_FR</option>
+                   <option value="fi">MOD_ITPSHARE_FINNISH</option>
+                   <option value="de">MOD_ITPSHARE_GERMAN</option>
+                   <option value="el">MOD_ITPSHARE_GREEK</option>
+                   <option value="hi">MOD_ITPSHARE_HINDI</option>
+                   <option value="hu">MOD_ITPSHARE_HUNGARIAN</option>
+                   <option value="it">MOD_ITPSHARE_ITALIAN</option>
+                   <option value="id">MOD_ITPSHARE_INDONESIAN</option>
+                   <option value="uk">MOD_ITPSHARE_UKRAINIAN</option>
+                   <option value="ur">MOD_ITPSHARE_URDU</option>
+                   <option value="ko">MOD_ITPSHARE_KOREAN</option>
+                   <option value="msa">MOD_ITPSHARE_MALAY</option>
+                   <option value="ru">MOD_ITPSHARE_RUSSIAN</option>
+                   <option value="es">MOD_ITPSHARE_SPANISH</option>
+                   <option value="sv">MOD_ITPSHARE_SWEDISH</option>
+                   <option value="no">MOD_ITPSHARE_NORWEGIAN</option>
+                   <option value="pl">MOD_ITPSHARE_POLISH</option>
+                   <option value="pt">MOD_ITPSHARE_PORTUGUESE</option>
+                   <option value="th">MOD_ITPSHARE_THAI</option>
+                   <option value="tr">MOD_ITPSHARE_TURKISH</option>
+                   <option value="jp">MOD_ITPSHARE_JAPANESE</option>
+                </field>
+                
+                <field name="load_twitter_library" type="radio" default="1" label="MOD_ITPSHARE_TWITTER_LOAD_LIBRARY" description="MOD_ITPSHARE_TWITTER_LOAD_LIBRARY_DESC" class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                
+            </fieldset>
+            
+            <fieldset name="thumblr_section" label="MOD_ITPSHARE_TUMBLR_SETTINGS">
+                <field name="tumblrButton" type="radio" default="0" label="MOD_ITPSHARE_DISPLAY_BUTTON" description="MOD_ITPSHARE_DISPLAY_BUTTON_DESC" class="btn-group">
+                   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
+                </field>
+                <field name="tumblrType" type="list" default="small" label="MOD_ITPSHARE_TUMBLR_TYPE" description="MOD_ITPSHARE_TUMBLR_TYPE_DESC" >
+                   <option value="0">MOD_ITPSHARE_BUTTON_1</option>
+                   <option value="1">MOD_ITPSHARE_BUTTON_2</option>
+                   <option value="2">MOD_ITPSHARE_BUTTON_3</option>
+                   <option value="3">MOD_ITPSHARE_BUTTON_4</option>
+                   <option value="4">MOD_ITPSHARE_BUTTON_5</option>
+                   <option value="5">MOD_ITPSHARE_BUTTON_6</option>
+                   <option value="6">MOD_ITPSHARE_BUTTON_7</option>
+                   <option value="7">MOD_ITPSHARE_BUTTON_8</option>
+                </field>
+                <field name="loadTumblrJsLib" type="radio" default="1" label="MOD_ITPSHARE_TUMBLR_LOAD_JS" description="MOD_ITPSHARE_TUMBLR_LOAD_JS_DESC" class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+            
+            <fieldset name="facebook_like_section" label="MOD_ITPSHARE_FACEBOOK_SETTINGS">
+                <field name="facebookLikeButton" type="radio" default="0" label="MOD_ITPSHARE_DISPLAY_BUTTON" description="MOD_ITPSHARE_DISPLAY_BUTTON_DESC" class="btn-group">
+                   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
+                </field>
+                <field name="facebookLikeRenderer" type="list" default="2" label="MOD_ITPSHARE_FACEBOOK_RENDERER" description="MOD_ITPSHARE_FACEBOOK_RENDERER_DESC" >
+                   <option value="0">iframe</option>
+                   <option value="1">XFBML</option>
+                   <option value="2">HTML5</option>
+                </field>
+                <field name="facebookLikeAction" type="list" default="like" label="MOD_ITPSHARE_FACEBOOK_TEXT" description="MOD_ITPSHARE_FACEBOOK_TEXT_DESC" >
+                   <option value="like">MOD_ITPSHARE_LIKE</option>
+                   <option value="recommend">MOD_ITPSHARE_RECOMMEND</option>
+                </field>
+                <field name="facebookLikeType" type="list" default="button_count" label="MOD_ITPSHARE_FACEBOOK_TYPE" description="MOD_ITPSHARE_FACEBOOK_TYPE_DESC" >
+                    <option value="standard">MOD_ITPSHARE_STANDARD</option>
+                    <option value="box_count">MOD_ITPSHARE_BOX_COUNT</option>
+                    <option value="button_count">MOD_ITPSHARE_BUTTON_COUNT</option>
+                </field>
+                <field name="facebookLikeFaces" type="radio" default="0" label="MOD_ITPSHARE_FACEBOOK_FACES" description="MOD_ITPSHARE_FACEBOOK_FACES_DESC" class="btn-group">
+                   <option value="0">JHIDE</option>
+                   <option value="1">JSHOW</option>
+                </field>
+                <field name="facebookLikeColor" type="list" default="light" label="MOD_ITPSHARE_FACEBOOK_COLOR" description="MOD_ITPSHARE_FACEBOOK_COLOR_DESC" >
+                   <option value="light">MOD_ITPSHARE_LIGHT</option>
+                   <option value="dark">MOD_ITPSHARE_DARK</option>
+                </field>
+                <field name="facebookLikeFont" type="list" default="" label="MOD_ITPSHARE_FACEBOOK_FONT" description="MOD_ITPSHARE_FACEBOOK_FONT_DESC" >
+                   <option value=""></option>
+                    <option value="arial">arial</option>
+                    <option value="lucida grande">lucida grande</option>
+                    <option value="segoe ui">segoe ui</option>
+                    <option value="tahoma">tahoma</option>
+                    <option value="trebuchet ms">trebuchet ms</option>
+                    <option value="verdana">verdana</option>
+                </field>
+                <field name="facebookLikeWidth" type="text" default="90" label="MOD_ITPSHARE_FACEBOOK_WIDTH" description="MOD_ITPSHARE_FACEBOOK_WIDTH_DESC" />
+                <field name="fbLocale" type="list" default="en_US" label="MOD_ITPSHARE_LANGUAGE" description="MOD_ITPSHARE_LANGUAGE_DESC">
+                    <option value="af_ZA">MOD_ITPSHARE_AFRIKAANS</option>
+                    <option value="ar_AR">MOD_ITPSHARE_ARABIC</option>
+                    <option value="sq_AL">MOD_ITPSHARE_ALBANIAN</option>
+                    <option value="ay_BO">MOD_ITPSHARE_AYMARA</option>
+                    <option value="az_AZ">MOD_ITPSHARE_AZERI</option>
+                    <option value="be_BY">MOD_ITPSHARE_BELARUSIAN</option>
+                    <option value="bg_BG">MOD_ITPSHARE_BULGARIAN</option>
+                    <option value="bn_IN">MOD_ITPSHARE_BENGALI</option>
+                    <option value="bs_BA">MOD_ITPSHARE_BOSNIAN</option>
+                    <option value="ca_ES">MOD_ITPSHARE_CATALAN</option>
+                    <option value="zh_CN">MOD_ITPSHARE_CHINESE_ZH</option>
+                    <option value="zh_HK">MOD_ITPSHARE_CHINESE_HK</option>
+                    <option value="zh_TW">MOD_ITPSHARE_CHINESE_TW</option>
+                    <option value="ck_US">MOD_ITPSHARE_CHEROKEE</option>
+                    <option value="cs_CZ">MOD_ITPSHARE_CZECH</option>
+                    <option value="cy_GB">MOD_ITPSHARE_WELSH</option>
+                    <option value="da_DK">MOD_ITPSHARE_DANISH</option>
+                    <option value="de_DE">MOD_ITPSHARE_GERMAN</option>
+                    <option value="el_GR">MOD_ITPSHARE_GREEK</option>
+                    <option value="en_GB">MOD_ITPSHARE_ENGLISH_GB</option>
+                    <option value="en_PI">MOD_ITPSHARE_ENGLISH_PI</option>
+                    <option value="en_UD">MOD_ITPSHARE_ENGLISH_UD</option>
+                    <option value="en_US">MOD_ITPSHARE_ENGLISH</option>
+                    <option value="eo_EO">MOD_ITPSHARE_ESPERANTO</option>
+                    <option value="es_CL">MOD_ITPSHARE_SPANISH_CL</option>
+                    <option value="es_CO">MOD_ITPSHARE_SPANISH_CO</option>
+                    <option value="es_ES">MOD_ITPSHARE_SPANISH_ES</option>
+                    <option value="es_LA">MOD_ITPSHARE_SPANISH</option>
+                    <option value="es_MX">MOD_ITPSHARE_SPANISH_MX</option>
+                    <option value="es_VE">MOD_ITPSHARE_SPANISH_VE</option>
+                    <option value="et_EE">MOD_ITPSHARE_ESTONIAN</option>
+                    <option value="eu_ES">MOD_ITPSHARE_BASQUE</option>
+                    <option value="fa_IR">MOD_ITPSHARE_PERSIAN</option>
+                    <option value="fb_LT">MOD_ITPSHARE_LEET_SPEAK</option>
+                    <option value="fi_FI">MOD_ITPSHARE_FINNISH</option>
+                    <option value="fo_FO">MOD_ITPSHARE_FAROESE</option>
+                    <option value="fr_CA">MOD_ITPSHARE_FRENCH_CA</option>
+                    <option value="fr_FR">MOD_ITPSHARE_FRENCH_FR</option>
+                    <option value="ga_IE">MOD_ITPSHARE_IRISH</option>
+                    <option value="gl_ES">MOD_ITPSHARE_GALICIAN</option>
+                    <option value="gn_PY">MOD_ITPSHARE_GUARANI</option>
+                    <option value="gu_IN">MOD_ITPSHARE_GUJARATI</option>
+                    <option value="he_IL">MOD_ITPSHARE_HEBREW</option>
+                    <option value="hi_IN">MOD_ITPSHARE_HINDI</option>
+                    <option value="hr_HR">MOD_ITPSHARE_CROATIAN</option>
+                    <option value="hu_HU">MOD_ITPSHARE_HUNGARIAN</option>
+                    <option value="hy_AM">MOD_ITPSHARE_ARMENIAN</option>
+                    <option value="id_ID">MOD_ITPSHARE_INDONESIAN</option>
+                    <option value="is_IS">MOD_ITPSHARE_ICELANDIC</option>
+                    <option value="it_IT">MOD_ITPSHARE_ITALIAN</option>
+                    <option value="ja_JP">MOD_ITPSHARE_JAPANESE</option>
+                    <option value="jv_ID">MOD_ITPSHARE_JAVANESE</option>
+                    <option value="ka_GE">MOD_ITPSHARE_GEORGIAN</option>
+                    <option value="kk_KZ">MOD_ITPSHARE_KAZAKH</option>
+                    <option value="km_KH">MOD_ITPSHARE_KHMER</option>
+                    <option value="kn_IN">MOD_ITPSHARE_KANNADA</option>
+                    <option value="ko_KR">MOD_ITPSHARE_KOREAN</option>
+                    <option value="ku_TR">MOD_ITPSHARE_KURDISH</option>
+                    <option value="la_VA">MOD_ITPSHARE_LATIN</option>
+                    <option value="li_NL">MOD_ITPSHARE_LIMBURGISH</option>
+                    <option value="lt_LT">MOD_ITPSHARE_LITHUANIAN</option>
+                    <option value="lv_LV">MOD_ITPSHARE_LATVIAN</option>
+                    <option value="mg_MG">MOD_ITPSHARE_MALAGASY</option>
+                    <option value="mk_MK">MOD_ITPSHARE_MACEDONIAN</option>
+                    <option value="ml_IN">MOD_ITPSHARE_MALAYalam</option>
+                    <option value="mn_MN">MOD_ITPSHARE_MONGOLIAN</option>
+                    <option value="mr_IN">MOD_ITPSHARE_MARATHI</option>
+                    <option value="ms_MY">MOD_ITPSHARE_MALAY</option>
+                    <option value="mt_MT">MOD_ITPSHARE_MALTESE</option>
+                    <option value="nb_NO">MOD_ITPSHARE_NORWEGIAN_NB</option>
+                    <option value="nn_NO">MOD_ITPSHARE_NORWEGIAN_NN</option>
+                    <option value="ne_NP">MOD_ITPSHARE_NEPALI</option>
+                    <option value="nl_BE">MOD_ITPSHARE_DUTCH_BE</option>
+                    <option value="nl_NL">MOD_ITPSHARE_DUTCH</option>
+                    <option value="pa_IN">MOD_ITPSHARE_PUNJABI</option>
+                    <option value="pl_PL">MOD_ITPSHARE_POLISH</option>
+                    <option value="ps_AF">MOD_ITPSHARE_PASHTO</option>
+                    <option value="pt_BR">MOD_ITPSHARE_PORTUGUESE_BR</option>
+                    <option value="pt_PT">MOD_ITPSHARE_PORTUGUESE_PT</option>
+                    <option value="qu_PE">MOD_ITPSHARE_QUECHUA</option>
+                    <option value="rm_CH">MOD_ITPSHARE_ROMANSH</option>
+                    <option value="ro_RO">MOD_ITPSHARE_ROMANIAN</option>
+                    <option value="ru_RU">MOD_ITPSHARE_RUSSIAN</option>
+                    <option value="sa_IN">MOD_ITPSHARE_SANSKRIT</option>
+                    <option value="se_NO">MOD_ITPSHARE_NORTHERN_SAMI</option>
+                    <option value="sk_SK">MOD_ITPSHARE_SLOVAK</option>
+                    <option value="sl_SI">MOD_ITPSHARE_SLOVENIAN</option>
+                    <option value="so_SO">MOD_ITPSHARE_SOMALI</option>
+                    <option value="sr_RS">MOD_ITPSHARE_SERBIAN</option>
+                    <option value="sv_SE">MOD_ITPSHARE_SWEDISH</option>
+                    <option value="sw_KE">MOD_ITPSHARE_SWAHILI</option>
+                    <option value="sy_SY">MOD_ITPSHARE_SYRIAC</option>
+                    <option value="ta_IN">MOD_ITPSHARE_TAMIL</option>
+                    <option value="te_IN">MOD_ITPSHARE_TELUGU</option>
+                    <option value="tg_TJ">MOD_ITPSHARE_TAJIK</option>
+                    <option value="th_TH">MOD_ITPSHARE_THAI</option>
+                    <option value="tl_PH">MOD_ITPSHARE_FILIPINO</option>
+                    <option value="tl_ST">MOD_ITPSHARE_KLINGON</option>
+                    <option value="tr_TR">MOD_ITPSHARE_TURKISH</option>
+                    <option value="tt_RU">MOD_ITPSHARE_TATAR</option>
+                    <option value="uk_UA">MOD_ITPSHARE_UKRAINIAN</option>
+                    <option value="ur_PK">MOD_ITPSHARE_URDU</option>
+                    <option value="uz_UZ">MOD_ITPSHARE_UZBEK</option>
+                    <option value="vi_VN">MOD_ITPSHARE_VIETNAMESE</option>
+                    <option value="xh_ZA">MOD_ITPSHARE_XHOSA</option>
+                    <option value="yi_DE">MOD_ITPSHARE_YIDDISH</option>
+                    <option value="zu_ZA">MOD_ITPSHARE_ZULU</option>
+                </field>
+                
+                <field name="facebookKidDirectedSite" type="radio" default="0" label="MOD_ITPSHARE_FACEBOOK_KID_DIRECTED_SITE" description="MOD_ITPSHARE_FACEBOOK_KID_DIRECTED_SITE_DESC" class="btn-group">
+                   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
+                </field>
+                
+                <field name="facebookLikeAppId" type="text" default="" label="MOD_ITPSHARE_FACEBOOK_APP_ID" description="MOD_ITPSHARE_FACEBOOK_APP_ID_DESC" />
+                <field name="facebookLikeSend" type="radio" default="0" label="MOD_ITPSHARE_FACEBOOK_SEND_BUTTON" description="MOD_ITPSHARE_FACEBOOK_SEND_BUTTON" class="btn-group">
+                   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
+                </field>
+                <field name="facebookRootDiv" type="radio" default="1" label="MOD_ITPSHARE_FACEBOOK_ROOT" description="MOD_ITPSHARE_FACEBOOK_ROOT_DESC" class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                 </field>
+                <field name="facebookLoadJsLib" type="radio" default="1" label="MOD_ITPSHARE_LOAD_JS_LIB" description="MOD_ITPSHARE_LOAD_JS_LIB_DESC" class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                
+            </fieldset>
+            
+            <fieldset name="stumbleupon_section" label="MOD_ITPSHARE_STUMBLEUPON_SETTINGS">
+                <field name="stumbleButton" type="radio" default="0" label="MOD_ITPSHARE_DISPLAY_BUTTON" description="MOD_ITPSHARE_DISPLAY_BUTTON_DESC" class="btn-group">
+                   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
+                </field>  
+                <field name="stumbleType" type="list" default="1" label="MOD_ITPSHARE_STUMBLEUPON_TYPE" description="MOD_ITPSHARE_STUMBLEUPON_TYPE_DESC" >
+                   <option value="1">MOD_ITPSHARE_BUTTON_1</option>
+                   <option value="2">MOD_ITPSHARE_BUTTON_2</option>
+                   <option value="3">MOD_ITPSHARE_BUTTON_3</option>
+                   <option value="4">MOD_ITPSHARE_BUTTON_4</option>
+                   <option value="5">MOD_ITPSHARE_BUTTON_5</option>
+                   <option value="6">MOD_ITPSHARE_BUTTON_6</option>
+                </field>  
+            </fieldset>
+            
+            <fieldset name="linkedin_section" label="MOD_ITPSHARE_LINKEDIN_SETTINGS">
+                <field name="linkedInButton" type="radio" default="0" label="MOD_ITPSHARE_DISPLAY_BUTTON" description="MOD_ITPSHARE_DISPLAY_BUTTON_DESC" class="btn-group">
+                   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
+                </field>
+                <field name="linkedInType" type="list" default="right" label="MOD_ITPSHARE_LINKEDIN_TYPE" description="MOD_ITPSHARE_LINKEDIN_TYPE_DESC" >
+                   <option value="none">MOD_ITPSHARE_COUNTER_NONE</option>
+                   <option value="top">MOD_ITPSHARE_COUNTER_TOP</option>
+                   <option value="right">MOD_ITPSHARE_COUNTER_RIGHT</option>
+                </field>  
+                <field name="load_linkedin_library" type="radio" default="1" label="MOD_ITPSHARE_LINKEDIN_LOAD_LIBRARY" description="MOD_ITPSHARE_LINKEDIN_LOAD_LIBRARY_DESC" class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+            
+            <fieldset name="reddit_section" label="MOD_ITPSHARE_REDDIT_SETTINGS">
+                <field name="redditButton" type="radio" default="0" label="MOD_ITPSHARE_DISPLAY_BUTTON" description="MOD_ITPSHARE_DISPLAY_BUTTON_DESC" class="btn-group">
+                   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
+                </field>
+                <field name="redditType" type="list" default="0" label="MOD_ITPSHARE_REDDIT_STYLE" description="MOD_ITPSHARE_REDDIT_STYLE_DESC" >
+                   <option value="0">MOD_ITPSHARE_BUTTON_1</option>
+                   <option value="1">MOD_ITPSHARE_BUTTON_2</option>
+                   <option value="2">MOD_ITPSHARE_BUTTON_3</option>
+                   <option value="3">MOD_ITPSHARE_BUTTON_4</option>
+                   <option value="4">MOD_ITPSHARE_BUTTON_5</option>
+                   <option value="5">MOD_ITPSHARE_BUTTON_6</option>
+                   <option value="6">MOD_ITPSHARE_BUTTON_7</option>
+                   <option value="7">MOD_ITPSHARE_BUTTON_8</option>
+                   <option value="8">MOD_ITPSHARE_BUTTON_9</option>
+                   <option value="9">MOD_ITPSHARE_BUTTON_10</option>
+                   <option value="10">MOD_ITPSHARE_BUTTON_11</option>
+                   <option value="11">MOD_ITPSHARE_BUTTON_12</option>
+                   <option value="12">MOD_ITPSHARE_BUTTON_13</option>
+                   <option value="13">MOD_ITPSHARE_BUTTON_14</option>
+                   <option value="14">MOD_ITPSHARE_BUTTON_15</option>
+                   <option value="15">MOD_ITPSHARE_BUTTON_16</option>
+                   <option value="16">MOD_ITPSHARE_BUTTON_17</option>
+                   <option value="17">MOD_ITPSHARE_BUTTON_18</option>
+                   <option value="18">MOD_ITPSHARE_BUTTON_19</option>
+                   <option value="19">MOD_ITPSHARE_BUTTON_20</option>
+                   <option value="20">MOD_ITPSHARE_BUTTON_21</option>
+                   <option value="21">MOD_ITPSHARE_BUTTON_22</option>
+                   <option value="22">MOD_ITPSHARE_BUTTON_23</option>
+                </field>
+                <field name="redditBgColor" type="text" default="" label="MOD_ITPSHARE_REDDIT_BG_COLOR" description="MOD_ITPSHARE_REDDIT_BG_COLOR_DESC" />
+                <field name="redditBorderColor" type="text" default="" label="MOD_ITPSHARE_REDDIT_BORDER_COLOR" description="MOD_ITPSHARE_REDDIT_BORDER_COLOR_DESC" />
+                <field name="redditNewTab" type="radio" default="1" label="MOD_ITPSHARE_REDDIT_NEW_TAB" description="MOD_ITPSHARE_REDDIT_NEW_TAB_DESC" class="btn-group">
+                   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
+                </field>
+            </fieldset>
+            
+            <fieldset name="google_one_section" label="MOD_ITPSHARE_GOOGLE_ONE_SETTINGS">
+                <field name="plusButton" type="radio" default="0" label="MOD_ITPSHARE_DISPLAY_BUTTON" description="MOD_ITPSHARE_DISPLAY_BUTTON_DESC" class="btn-group">
+                   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
+                </field>
+                <field name="plusRenderer" type="list" default="0" label="MOD_ITPSHARE_GOOGLE_ONE_RENDERER" description="MOD_ITPSHARE_GOOGLE_ONE_RENDERER_DESC" >
+                   <option value="0">HTML5</option>
+                   <option value="1">MOD_ITPSHARE_STANDARD</option>
+                </field>
+                <field name="plusType" type="list" default="medium" label="MOD_ITPSHARE_GOOGLE_ONE_STYLE" description="MOD_ITPSHARE_GOOGLE_ONE_STYLE_DESC" >
+                   <option value="small">MOD_ITPSHARE_SMALL_15</option>
+                   <option value="standart">MOD_ITPSHARE_STANDARD_24</option>
+                   <option value="medium">MOD_ITPSHARE_MEDIUM_20</option>
+                   <option value="tall">MOD_ITPSHARE_TALL_60</option>
+                </field>
+                
+                <field name="plusAnnotation" type="list" default="" label="MOD_ITPSHARE_GOOGLE_ONE_ANNOTATION" description="MOD_ITPSHARE_GOOGLE_ONE_ANNOTATION_DESC" >
+                   <option value="">MOD_ITPSHARE_BUBBLE</option>
+                   <option value="inline">MOD_ITPSHARE_INLINE</option>
+                   <option value="none">MOD_ITPSHARE_NONE</option>
+                </field>
+                
+                <field name="plusLocale" type="list" default="en" label="MOD_ITPSHARE_LANGUAGE" description="MOD_ITPSHARE_LANGUAGE_DESC" >
+                    <option value="ar">MOD_ITPSHARE_ARABIC</option>
+                    <option value="bn">MOD_ITPSHARE_BENGALI</option>
+                    <option value="bg">MOD_ITPSHARE_BULGARIAN</option>
+                    <option value="ca">MOD_ITPSHARE_CATALAN</option>
+                    <option value="zh">MOD_ITPSHARE_CHINESE_ZH</option>
+                    <option value="zh_CN">MOD_ITPSHARE_CHINESE_ZH</option>
+                    <option value="zh_HK">MOD_ITPSHARE_CHINESE_HK</option>
+                    <option value="zh_TW">MOD_ITPSHARE_CHINESE_TW</option>
+                    <option value="hr">MOD_ITPSHARE_CROATIAN</option>
+                    <option value="cs">MOD_ITPSHARE_CZECH</option>
+                    <option value="da">MOD_ITPSHARE_DANISH</option>
+                    <option value="nl">MOD_ITPSHARE_DUTCH</option>
+                    <option value="en">MOD_ITPSHARE_ENGLISH</option>
+                    <option value="en_IN">MOD_ITPSHARE_ENGLISH_IN</option>
+                    <option value="en_IE">MOD_ITPSHARE_ENGLISH_IR</option>
+                    <option value="en_SG">MOD_ITPSHARE_ENGLISH_SG</option>
+                    <option value="en_ZA">MOD_ITPSHARE_ENGLISH_SA</option>
+                    <option value="en_GB">MOD_ITPSHARE_ENGLISH_GB</option>
+                    <option value="fil">MOD_ITPSHARE_FILIPINO</option>
+                    <option value="fi">MOD_ITPSHARE_FINNISH</option>
+                    <option value="fr">MOD_ITPSHARE_FRENCH_FR</option>
+                    <option value="de">MOD_ITPSHARE_GERMAN</option>
+                    <option value="de_CH">MOD_ITPSHARE_GERMAN_CH</option>
+                    <option value="el">MOD_ITPSHARE_GREEK</option>
+                    <option value="gu">MOD_ITPSHARE_GUJARATI</option>
+                    <option value="iw">MOD_ITPSHARE_HEBREW</option>
+                    <option value="hi">MOD_ITPSHARE_HINDI</option>
+                    <option value="hu">MOD_ITPSHARE_HUNGARIAN</option>
+                    <option value="in">MOD_ITPSHARE_INDONESIAN</option>
+                    <option value="it">MOD_ITPSHARE_ITALIAN</option>
+                    <option value="ja">MOD_ITPSHARE_JAPANESE</option>
+                    <option value="kn">MOD_ITPSHARE_KANNADA</option>
+                    <option value="ko">MOD_ITPSHARE_KOREAN</option>
+                    <option value="lv">MOD_ITPSHARE_LATVIAN</option>
+                    <option value="ln">MOD_ITPSHARE_LINGALA</option>
+                    <option value="lt">MOD_ITPSHARE_LITHUANIAN</option>
+                    <option value="ms">MOD_ITPSHARE_MALAY</option>
+                    <option value="ml">MOD_ITPSHARE_MALAYalam</option>
+                    <option value="mr">MOD_ITPSHARE_MARATHI</option>
+                    <option value="no">MOD_ITPSHARE_NORWEGIAN</option>
+                    <option value="or">MOD_ITPSHARE_ORIYA</option>
+                    <option value="fa">MOD_ITPSHARE_PERSIAN</option>
+                    <option value="pl">MOD_ITPSHARE_POLISH</option>
+                    <option value="pt_BR">MOD_ITPSHARE_PORTUGUESE_BR</option>
+                    <option value="pt_PT">MOD_ITPSHARE_PORTUGUESE_PT</option>
+                    <option value="ro">MOD_ITPSHARE_ROMANIAN</option>
+                    <option value="ru">MOD_ITPSHARE_RUSSIAN</option>
+                    <option value="sr">MOD_ITPSHARE_SERBIAN</option>
+                    <option value="sk">MOD_ITPSHARE_SLOVAK</option>
+                    <option value="sl">MOD_ITPSHARE_SLOVENIAN</option>
+                    <option value="es">MOD_ITPSHARE_SPANISH</option>
+                    <option value="sv">MOD_ITPSHARE_SWEDISH</option>
+                    <option value="gsw">MOD_ITPSHARE_GERMAN_SW</option>
+                    <option value="ta">MOD_ITPSHARE_TAMIL</option>
+                    <option value="te">MOD_ITPSHARE_TELUGU</option>
+                    <option value="th">MOD_ITPSHARE_THAI</option>
+                    <option value="tr">MOD_ITPSHARE_TURKISH</option>
+                    <option value="uk">MOD_ITPSHARE_UKRAINIAN</option>
+                    <option value="vi">MOD_ITPSHARE_VIETNAMESE</option>
+                </field>
+                
+                <field name="loadGoogleJsLib" type="radio" default="1" label="MOD_ITPSHARE_GOOGLE_LOAD_JS" description="MOD_ITPSHARE_GOOGLE_LOAD_JS_DESC" class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                
+            </fieldset>
+            
+            <fieldset name="pinterest_section" label="MOD_ITPSHARE_PINTEREST_SETTINGS">
+                <field name="pinterestButton" type="radio" default="0" label="MOD_ITPSHARE_DISPLAY_BUTTON" description="MOD_ITPSHARE_DISPLAY_BUTTON_DESC" class="btn-group">
+                   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
+                </field>
+                <field name="pinterestImages" type="list" default="one" label="MOD_ITPSHARE_PINTEREST_IMAGES" description="MOD_ITPSHARE_PINTEREST_IMAGES_DESC" >
+                   <option value="one">MOD_ITPSHARE_ONE_IMAGE</option>
+                   <option value="any">MOD_ITPSHARE_ANY_IMAGE</option>
+                </field>
+                <field name="pinterestType" type="list" default="none" label="MOD_ITPSHARE_PINTEREST_TYPE" description="MOD_ITPSHARE_PINTEREST_TYPE_DESC" >
+                   <option value="none">MOD_ITPSHARE_NOT_SHOWN</option>
+                   <option value="above">MOD_ITPSHARE_ABOVE_BUTTON</option>
+                   <option value="beside">MOD_ITPSHARE_BESIDE_BUTTON</option>
+                </field>
+                <field name="loadPinterestJsLib" type="radio" default="1" label="MOD_ITPSHARE_PINTEREST_JS" description="MOD_ITPSHARE_PINTEREST_LOAD_JS_DESC" class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+            
+            <fieldset name="buffer_section" label="MOD_ITPSHARE_BUFFER_SETTINGS">
+                <field name="bufferButton" type="radio" default="0" label="MOD_ITPSHARE_DISPLAY_BUTTON" description="MOD_ITPSHARE_DISPLAY_BUTTON_DESC" class="btn-group">
+                   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
+                </field>
+                <field name="bufferType" type="list" default="horizontal" label="MOD_ITPSHARE_BUFFER_TYPE" description="MOD_ITPSHARE_BUFFER_TYPE_DESC" >
+                   <option value="none">MOD_ITPSHARE_NONE</option>
+                   <option value="horizontal">MOD_ITPSHARE_HORIZONTAL</option>
+                   <option value="vertical">MOD_ITPSHARE_VERTICAL</option>
+                </field>
+                <field name="bufferTwitterName" type="text" default="" size="80" label="MOD_ITPSHARE_BUFFER_USERNAME" description="MOD_ITPSHARE_BUFFER_USERNAME_DESC" />
+            </fieldset>
+            
+            <fieldset name="google_share_section" label="MOD_ITPSHARE_GOOGLE_SHARE_SETTINGS">
+                <field name="gsButton" type="radio" default="0" label="MOD_ITPSHARE_DISPLAY_BUTTON" description="MOD_ITPSHARE_DISPLAY_BUTTON_DESC" class="btn-group">
+                   <option value="0">JNO</option>
+                   <option value="1">JYES</option>
+                </field>
+                <field name="gsRenderer" type="list" default="0" label="MOD_ITPSHARE_GOOGLE_SHARE_RENDERER" description="MOD_ITPSHARE_GOOGLE_SHARE_RENDERER_DESC" >
+                   <option value="0">HTML5</option>
+                   <option value="1">MOD_ITPSHARE_STANDARD</option>
+                </field>
+                <field name="gsType" type="list" default="0" label="MOD_ITPSHARE_GOOGLE_SHARE_STYLE" description="MOD_ITPSHARE_GOOGLE_SHARE_STYLE_DESC" >
+                   <option value="15">MOD_ITPSHARE_SMALL_15</option>
+                   <option value="0">MOD_ITPSHARE_STANDARD</option>
+                   <option value="24">MOD_ITPSHARE_LARGE_20</option>
+                </field>
+                
+                <field name="gsAnnotation" type="list" default="bubble" label="MOD_ITPSHARE_GOOGLE_SHARE_ANNOTATION" description="MOD_ITPSHARE_GOOGLE_SHARE_ANNOTATION_DESC" >
+                   <option value="bubble">MOD_ITPSHARE_BUBBLE_HORIZONTAL</option>
+                   <option value="vertical-bubble">MOD_ITPSHARE_BUBBLE_VERTICAL</option>
+                   <option value="inline">MOD_ITPSHARE_INLINE</option>
+                   <option value="none">MOD_ITPSHARE_NONE</option>
+                </field>
+                
+                <field name="gsLocale" type="list" default="en" label="MOD_ITPSHARE_LANGUAGE" description="MOD_ITPSHARE_LANGUAGE_DESC" >
+                    <option value="ar">MOD_ITPSHARE_ARABIC</option>
+                    <option value="bn">MOD_ITPSHARE_BENGALI</option>
+                    <option value="bg">MOD_ITPSHARE_BULGARIAN</option>
+                    <option value="ca">MOD_ITPSHARE_CATALAN</option>
+                    <option value="zh">MOD_ITPSHARE_CHINESE</option>
+                    <option value="zh_CN">MOD_ITPSHARE_CHINESE_ZH</option>
+                    <option value="zh_HK">MOD_ITPSHARE_CHINESE_HK</option>
+                    <option value="zh_TW">MOD_ITPSHARE_CHINESE_TW</option>
+                    <option value="hr">MOD_ITPSHARE_CROATIAN</option>
+                    <option value="cs">MOD_ITPSHARE_CZECH</option>
+                    <option value="da">MOD_ITPSHARE_DANISH</option>
+                    <option value="nl">MOD_ITPSHARE_DUTCH</option>
+                    <option value="en">MOD_ITPSHARE_ENGLISH</option>
+                    <option value="en_IN">MOD_ITPSHARE_ENGLISH_IN</option>
+                    <option value="en_IE">MOD_ITPSHARE_ENGLISH_IR</option>
+                    <option value="en_SG">MOD_ITPSHARE_ENGLISH_SG</option>
+                    <option value="en_ZA">MOD_ITPSHARE_ENGLISH_SA</option>
+                    <option value="en_GB">MOD_ITPSHARE_ENGLISH_GB</option>
+                    <option value="fil">MOD_ITPSHARE_FILIPINO</option>
+                    <option value="fi">MOD_ITPSHARE_FINNISH</option>
+                    <option value="fr">MOD_ITPSHARE_FRENCH_FR</option>
+                    <option value="de">MOD_ITPSHARE_GERMAN</option>
+                    <option value="de_CH">MOD_ITPSHARE_GERMAN_CH</option>
+                    <option value="el">MOD_ITPSHARE_GREEK</option>
+                    <option value="gu">MOD_ITPSHARE_GUJARATI</option>
+                    <option value="iw">MOD_ITPSHARE_HEBREW</option>
+                    <option value="hi">MOD_ITPSHARE_HINDI</option>
+                    <option value="hu">MOD_ITPSHARE_HUNGARIAN</option>
+                    <option value="in">MOD_ITPSHARE_INDONESIAN</option>
+                    <option value="it">MOD_ITPSHARE_ITALIAN</option>
+                    <option value="ja">MOD_ITPSHARE_JAPANESE</option>
+                    <option value="kn">MOD_ITPSHARE_KANNADA</option>
+                    <option value="ko">MOD_ITPSHARE_KOREAN</option>
+                    <option value="lv">MOD_ITPSHARE_LATVIAN</option>
+                    <option value="ln">MOD_ITPSHARE_LINGALA</option>
+                    <option value="lt">MOD_ITPSHARE_LITHUANIAN</option>
+                    <option value="ms">MOD_ITPSHARE_MALAY</option>
+                    <option value="ml">MOD_ITPSHARE_MALAYalam</option>
+                    <option value="mr">MOD_ITPSHARE_MARATHI</option>
+                    <option value="no">MOD_ITPSHARE_NORWEGIAN</option>
+                    <option value="or">MOD_ITPSHARE_ORIYA</option>
+                    <option value="fa">MOD_ITPSHARE_PERSIAN</option>
+                    <option value="pl">MOD_ITPSHARE_POLISH</option>
+                    <option value="pt_BR">MOD_ITPSHARE_PORTUGUESE_BR</option>
+                    <option value="pt_PT">MOD_ITPSHARE_PORTUGUESE_PT</option>
+                    <option value="ro">MOD_ITPSHARE_ROMANIAN</option>
+                    <option value="ru">MOD_ITPSHARE_RUSSIAN</option>
+                    <option value="sr">MOD_ITPSHARE_SERBIAN</option>
+                    <option value="sk">MOD_ITPSHARE_SLOVAK</option>
+                    <option value="sl">MOD_ITPSHARE_SLOVENIAN</option>
+                    <option value="es">MOD_ITPSHARE_SPANISH</option>
+                    <option value="sv">MOD_ITPSHARE_SWEDISH</option>
+                    <option value="gsw">MOD_ITPSHARE_GERMAN_SW</option>
+                    <option value="ta">MOD_ITPSHARE_TAMIL</option>
+                    <option value="te">MOD_ITPSHARE_TELUGU</option>
+                    <option value="th">MOD_ITPSHARE_THAI</option>
+                    <option value="tr">MOD_ITPSHARE_TURKISH</option>
+                    <option value="uk">MOD_ITPSHARE_UKRAINIAN</option>
+                    <option value="vi">MOD_ITPSHARE_VIETNAMESE</option>
+                </field>
+            </fieldset>
+            
+            <fieldset name="short_url_settings" label="MOD_ITPSHARE_SHORTENER_SETTINGS">
+                <field name="shortener_service" type="list" default="" label="MOD_ITPSHARE_SHORTENER_SERVICE" description="MOD_ITPSHARE_SHORTENER_SERVICE_DESC" >
+                   <option value="">MOD_ITPSHARE_NONE</option>
+                   <option value="google">goo.gl</option>
+                   <option value="bitly">bit.ly</option>
+                   <option value="bitlycom">bitly.com</option>
+                   <option value="jmp">j.mp</option>
+                   <option value="tinycc">tiny.cc</option>
+                </field>
+                <field name="shortener_login" type="text" default="" label="MOD_ITPSHARE_LOGIN" description="MOD_ITPSHARE_LOGIN_DESC"/>
+                <field name="shortener_api_key" type="text" default="" size="80" label="MOD_ITPSHARE_API_KEY" description="MOD_ITPSHARE_API_KEY_DESC"/>
+            </fieldset>
+            
+            <fieldset name="additional_code" label="MOD_ITPSHARE_ADDITIONAL_BUTTONS">
+                <field name="ebuttons1" type="textarea" default="" label="MOD_ITPSHARE_CUSTOM_BUTTON_CODE" description="MOD_ITPSHARE_CUSTOM_BUTTON_CODE_DESC" class="span6" cols="50" rows="10" filter="raw" />
+                <field name="ebuttons2" type="textarea" default="" label="MOD_ITPSHARE_CUSTOM_BUTTON_CODE" description="MOD_ITPSHARE_CUSTOM_BUTTON_CODE_DESC" class="span6" cols="50" rows="10" filter="raw" />
+                <field name="ebuttons3" type="textarea" default="" label="MOD_ITPSHARE_CUSTOM_BUTTON_CODE" description="MOD_ITPSHARE_CUSTOM_BUTTON_CODE_DESC" class="span6" cols="50" rows="10" filter="raw" />
+                <field name="ebuttons4" type="textarea" default="" label="MOD_ITPSHARE_CUSTOM_BUTTON_CODE" description="MOD_ITPSHARE_CUSTOM_BUTTON_CODE_DESC" class="span6" cols="50" rows="10" filter="raw" />
+                <field name="ebuttons5" type="textarea" default="" label="MOD_ITPSHARE_CUSTOM_BUTTON_CODE" description="MOD_ITPSHARE_CUSTOM_BUTTON_CODE_DESC" class="span6" cols="50" rows="10" filter="raw" />
+            </fieldset>
+            
+			<fieldset name="advanced">
+
+				<field
+                    name="moduleclass_sfx"
+                    type="text"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+                    
+                <field
+                    name="cache"
+                    type="list"
+                    default="1"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option
+                        value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option
+                        value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+                
+                <field
+                    name="cache_time"
+                    type="text"
+                    default="900"
+                    label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                    description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+					
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,9 @@
+.layer-effect-recentwork .sequence-next,
+.layer-effect-recentwork .sequence-prev {
+	bottom: -10px;
+	top: auto;
+}
+.layer-effect-recentwork .sequence-next {
+	left: 35px;
+	right: auto;
+}

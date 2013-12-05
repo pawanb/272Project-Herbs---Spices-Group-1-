@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="k2" method="upgrade">
+	<name>K2 Plugin - CComment</name>
+	<author>Compojoom</author>
+	<creationDate>2013-10-03</creationDate>
+	<copyright>Copyright (c) 2008 - 2010 Compojoom.com. All rights reserved.</copyright>
+	<authorEmail>services@compojoom.com</authorEmail>
+	<authorUrl>www.compojoom.com</authorUrl>
+	<version>5.0.2</version>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>A K2 plugin to allow comments with compojoomcomment</description>
+	<files>
+		<file plugin="ccomment">ccomment.php</file>
+	</files>
+	<params>
+	</params>
+</extension>

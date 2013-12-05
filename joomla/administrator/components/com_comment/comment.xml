@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+	<name>COM_COMMENT</name>
+	<author>Compojoom.com</author>
+	<creationDate>2013-10-03</creationDate>
+	<copyright>(C) 2010 Daniel Dimitrov</copyright>
+	<authorEmail>contact-us@compojoom.com</authorEmail>
+	<authorUrl>https://compojoom.com</authorUrl>
+	<version>5.0.2</version>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<scriptfile>script.php</scriptfile>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.sql</file>
+		</sql>
+	</install>
+	<administration>
+		<menu img="../media/com_comment/backend/images/ccomment-logo.png">COM_COMMENT</menu>
+		<submenu>
+			<menu view="comments" img="../media/com_comment/backend/images/edit.png">COM_COMMENT_MANAGE_COMMENTS</menu>
+			<menu view="settings" img="../media/com_comment/backend/images/config.png">COM_COMMENT_SETTINGS</menu>
+			<menu view="import" img="../media/com_comment/backend/images/controlpanel.png">COM_COMMENT_IMPORT</menu>
+			<menu view="liveupdate" img="../media/com_comment/backend/images/live-update.png">COM_COMMENT_LIVEUPDATE</menu>
+		</submenu>
+		<files folder="administrator/components/com_comment">
+			<file>access.xml</file>
+<file>CHANGELOG.php</file>
+<file>comment.php</file>
+<file>comment.xml</file>
+<file>config.xml</file>
+<file>controller.php</file>
+<folder>controllers</folder>
+<folder>helpers</folder>
+<folder>library</folder>
+<folder>liveupdate</folder>
+<folder>models</folder>
+<folder>plugins</folder>
+<file>script.php</file>
+<folder>sql</folder>
+<folder>tables</folder>
+<file>toolbar.comment.php</file>
+<file>version.php</file>
+<folder>views</folder>
+		</files>
+		<languages folder="administrator/language">
+			<language tag="en-GB">en-GB/en-GB.com_comment.ini</language>
+<language tag="en-GB">en-GB/en-GB.com_comment.sys.ini</language>
+		</languages>
+	</administration>
+
+	<files folder="components/com_comment">
+		<folder>assets</folder>
+<folder>classes</folder>
+<file>comment.php</file>
+<file>controller.php</file>
+<folder>controllers</folder>
+<folder>helpers</folder>
+<file>jomsocial_rule.xml</file>
+<folder>models</folder>
+<folder>templates</folder>
+<folder>views</folder>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.com_comment.ini</language>
+	</languages>
+
+
+	<media destination="com_comment" folder="media/com_comment">
+		<folder>backend</folder>
+<folder>emoticons</folder>
+<folder>images</folder>
+<folder>js</folder>
+<folder>templates</folder>
+<folder>ubb</folder>
+	</media>
+</extension>

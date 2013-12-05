@@ -1,0 +1,1071 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>ST Content Showcase</name>
+	<author>Beautiful Templates</author>
+	<creationDate>January 2013</creationDate>
+	<copyright>Copyright (C) Beautiful-templates.com. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>submittemplates@gmail.com</authorEmail>
+	<authorUrl>www.beautiful-templates.com</authorUrl>
+	<version>2.0.0</version>
+	<edition>PRO</edition>
+	<description>MOD_ST_CONTENT_SHOWCASE_XML_DESC</description>
+	<files>
+		<filename module="mod_st_content_showcase">mod_st_content_showcase.php</filename>
+		<folder>tmpl</folder>
+		<folder>elements</folder>
+		<folder>exts</folder>
+		<folder>models</folder>
+		<folder>assets</folder>
+		<filename>index.html</filename>
+		<filename>defined.php</filename>
+		<filename>stContentShowcase.php</filename>
+		<filename>mod_st_content_showcase.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_st_content_showcase.ini</language>
+		<language tag="en-GB">en-GB.mod_st_content_showcase.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="assets" addfieldpath="/modules/mod_st_content_showcase/elements" type="loadCSSJSAdmin"/>
+				<field
+					name="copyright"
+					class="btn-group"
+					type="radio"
+					default="1"
+					label="ST_GLOBAL_COPYRIGHT"
+					>
+					<option  value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="item_id"
+					type="text"
+					label="COM_MODULES_FIELD_ITEM_ID"
+					description="COM_MODULES_FIELD_ITEM_ID_DESC" />
+				<field
+					name="count"
+					type="text"
+					default="20"
+					label="MOD_ARTICLES_NEWS_FIELD_ITEMS_LABEL"
+					description="MOD_ARTICLES_NEWS_FIELD_ITEMS_DESC" />
+				
+				<field
+					name="extension"
+					type="folderlist"
+					directory="modules/mod_st_content_showcase/exts"
+					default="wall"
+					hide_default="true"
+					label="ST_GLOBAL_EXTENSION"
+					description="ST_GLOBAL_EXTENSION_DESC" />
+				<field
+					addfieldpath="/modules/mod_st_content_showcase/elements"
+					name="source"
+					type="sourcefolders"
+					directory="modules/mod_st_content_showcase/models"
+					default="wall"
+					hide_default="true"
+					label="ST_GLOBAL_SOURCE"
+					description="ST_GLOBAL_SOURCE_DESC" />
+					
+				<field
+					name="title"
+					class="btn-group"
+					type="radio"
+					default="1"
+					label="ST_GLOBAL_TITLE"
+					description="ST_GLOBAL_TITLE_DESC" >
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="title_link"
+					class="btn-group"
+					type="radio"
+					default="1"
+					label="ST_GLOBAL_TITLE_LINK"
+					description="ST_GLOBAL_TITLE_DESC_LINK_DESC" >
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="introtext"
+					class="btn-group"
+					type="radio"
+					default="1"
+					label="ST_GLOBAL_INTROTEXT"
+					description="ST_GLOBAL_INTROTEXT_DESC" >
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="introtext_length"
+					type="text"
+					filter="integer"
+					default="0"
+					label="ST_GLOBAL_INTROTEXT_LENGTH"
+					description="ST_GLOBAL_INTROTEXT_LENGTH_DESC" />
+				
+				<field
+					name="image"
+					class="btn-group"
+					type="radio"
+					default="1"
+					label="ST_GLOBAL_IMAGE"
+					description="ST_GLOBAL_IMAGE" >
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="image_link"
+					class="btn-group"
+					type="radio"
+					default="1"
+					label="ST_GLOBAL_IMAGE_LINK"
+					description="ST_GLOBAL_IMAGE_LINK_DESC" >
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="category"
+					class="btn-group"
+					type="radio"
+					default="1"
+					label="ST_GLOBAL_CATEGORY"
+					description="ST_GLOBAL_CATEGORY_DESC" >
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="auto_find_image"
+					class="btn-group"
+					type="radio"
+					default="1"
+					label="ST_GLOBAL_AUTO_FIND_IMAGE"
+					description="ST_GLOBAL_AUTO_FIND_IMAGE_DESC" >
+					<option  value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+			
+			<fieldset name="article_source">
+				<field addfieldpath="/administrator/modules/mod_st_content_showcase/elements"
+					name="article_catid"
+					type="stcategory"
+					extension="com_content"
+					multiple="true"
+					default=""
+					size="10"
+					label="JCATEGORY"
+					description="MOD_ARTICLES_NEWS_FIELD_CATEGORY_DESC" >
+					<option value="">JOPTION_ALL_CATEGORIES</option>
+				</field>
+				
+				<field
+					name="article_featured"
+					class="btn-group"
+					type="radio"
+					default="0"
+					label="ST_GLOBAL_ARTICLE_FEATURED"
+					description="ST_GLOBAL_ARTICLE_FEATURED_DESC" >
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="article_ordering"
+					class="btn-group"
+					type="list"
+					default="a.publish_up"
+					label="MOD_ARTICLES_NEWS_FIELD_ORDERING_LABEL"
+					description="MOD_ARTICLES_NEWS_FIELD_ORDERING_DESC">
+					<option
+						value="a.publish_up">MOD_ARTICLES_NEWS_FIELD_ORDERING_PUBLISHED_DATE</option>
+					<option
+						value="a.created">MOD_ARTICLES_NEWS_FIELD_ORDERING_CREATED_DATE</option>
+					<option
+						value="a.ordering">MOD_ARTICLES_NEWS_FIELD_ORDERING_ORDERING</option>
+					<option
+						value="a.hits">MOD_ARTICLES_NEWS_FIELD_ORDERING_HITS</option>	
+					<option
+						value="rand()">MOD_ARTICLES_NEWS_FIELD_ORDERING_RANDOM</option>
+				</field>
+			</fieldset>
+			
+			<fieldset name="k2_source">
+				<field addfieldpath="/administrator/components/com_k2/elements"
+					name="k2_catid" 
+					type="categoriesmultiple" 
+					extension="com_k2"
+					default=""
+					label="K2_SELECT_ONE_OR_MORE_CATEGORIES"/>
+				 
+				 <field name="k2_itemsOrdering" type="list" class="btn-group" default="" label="K2_ITEM_ORDERING" description="">
+			        <option value="">K2_DEFAULT</option>
+			        <option value="date">K2_OLDEST_FIRST</option>
+			        <option value="rdate">K2_MOST_RECENT_FIRST</option>
+			        <option value="publishUp">K2_RECENTLY_PUBLISHED</option>
+			        <option value="alpha">K2_TITLE_ALPHABETICAL</option>
+			        <option value="ralpha">K2_TITLE_REVERSEALPHABETICAL</option>
+			        <option value="order">K2_ORDERING</option>
+			        <option value="rorder">K2_ORDERING_REVERSE</option>
+			        <option value="hits">K2_MOST_POPULAR</option>
+			        <option value="best">K2_HIGHEST_RATED</option>
+			        <option value="comments">K2_MOST_COMMENTED</option>
+			        <option value="modified">K2_LATEST_MODIFIED</option>
+			        <option value="rand">K2_RANDOM_ORDERING</option>
+			    </field>
+			    <field name="k2_image_size" type="list" class="btn-group" default="M" label="K2_IMAGE_SIZE" description="">
+			        <option value="SX">SX</option>
+			        <option value="S">S</option>
+			        <option value="M">M</option>
+			        <option value="L">L</option>
+			        <option value="XL">XL</option>
+				</field>
+			</fieldset>
+			
+			<fieldset name="image_folder_sources" addfieldpath="/modules/mod_st_content_showcase/elements">
+				<field
+					name="folder_sync" type="radio" default="0"
+					class="btn-group"
+					label="ST_IMAGE_FOLDER_SYNC"
+					description="ST_IMAGE_FOLDER_SYNC_DESC">
+					<option value="0">JNO</option>
+					<option  value="1">JYES</option>
+				</field>
+				<field
+					name="folder_category"
+					type="folderlistfull"
+					directory="images"
+					size="10"
+					multiple="true"
+					hide_default="true"
+					label="ST_IMAGE_FOLDER_FOLDER"
+					description="ST_IMAGE_FOLDER_FOLDER_DESC" />
+					
+				<field name="folder_image" multiple="true" type="hiddenmultiple" default="" ></field>
+				<field name="folder_ititle" multiple="true" type="hiddenmultiple" default="" filter="raw"></field>
+				<field name="folder_ilink" multiple="true" type="hiddenmultiple" default="" filter="raw"></field>
+				<field name="folder_iintrotext" multiple="true" type="hiddenmultiple" default="" filter="raw"></field>
+				
+			</fieldset>
+			
+			<fieldset name="virtuemart_source" addfieldpath="/administrator/components/com_virtuemart/elements"> 
+				<field name="virtuemart_product_group" type="list" default="featured"
+					class="btn-group"
+					label="MOD_VIRTUEMART_PRODUCT_DISPLAY"
+					description="MOD_VIRTUEMART_PRODUCT_DISPLAY_DESC">
+				    <option value="featured">MOD_VIRTUEMART_PRODUCT_FEATURED_PRODUCTS</option>
+				    <option value="latest">MOD_VIRTUEMART_PRODUCT_LATEST_PRODUCTS</option>
+				    <option value="random">MOD_VIRTUEMART_PRODUCT_RANDOM_PRODUCTS</option>
+				    <option value="topten">MOD_VIRTUEMART_PRODUCT_BEST_SALES</option>
+				</field>
+				<field 
+					name="virtuemart_category" 
+					type="vmcategories"  
+					value_field="category_name" 
+					label="MOD_VIRTUEMART_PRODUCT_CATEGORY_ID" 
+					description="MOD_VIRTUEMART_PRODUCT_CATEGORY_ID_DESC" />
+			</fieldset>
+			
+			<fieldset name="phocagallery_source" addfieldpath="/administrator/components/com_phocagallery/models/fields"> 
+				<field name="phocagallery_category" type="stphocagallerycategory"
+					label="ST_PCGALLERY_CATEGORY"
+					size="4"
+					mutiple="true"
+					description="ST_PCGALLERY_CATEGORY_DESC"/>
+				<field name="phocagallery_ordering" type="list" class="btn-group" default="1" label="ST_PCGALLERY_ORDERING" description="ST_PCGALLERY_ORDERING_DESC">
+					<option value="1">Ordering ASC</option>
+					<option value="2">Ordering DESC</option>
+					<option value="3">Title ASC</option>
+					<option value="4">Title DESC</option>
+					<option value="5">Date ASC</option>
+					<option value="6">Date DESC</option>
+					<option value="7">Image's ID ASC</option>
+					<option value="8">Image's ID DESC</option>
+					<option value="9">Random</option>
+					<option value="11">Count ASC</option>
+				  	<option value="12">Count DESC</option>
+				  	<option value="13">Average ASC</option>
+				   	<option value="14">Average DESC</option>
+				   	<option value="15">Hits ASC</option>
+					<option value="16">Hits DESC</option>
+				</field>
+			</fieldset>
+			
+			<fieldset name="joomgallery_source" addfieldpath="/administrator/components/com_joomgallery/models/fields"> 
+				<field name="joomgallery_category" type="stjoomcategory"
+					mutiple="true"
+					size="5"
+					label="ST_JGALLERY_CATEGORY"
+					description="ST_JGALLERY_CATEGORY_DESC"/>
+				<field name="joomgallery_ordering" type="list" default="1" class="btn-group" label="ST_JGALLERY_ORDERING" description="ST_JGALLERY_ORDERING_DESC">
+					 <option value="rand()">JISORTRAND</option>
+					 <option value="p.id DESC">JISORTIDDESC</option>
+					 <option value="p.id ASC">JISORTIDASC</option>
+					 <option value="p.ordering DESC">JISORTORDDESC</option>
+					 <option value="p.ordering ASC">JISORTORDASC</option>
+					 <option value="p.imgtitle DESC">JISORTTITLEDESC</option>
+					 <option value="p.imgtitle ASC">JISORTTITELASC</option>
+					 <option value="p.imgfilename DESC">JISORTFILENAMEDESC</option>
+					 <option value="p.imgfilename ASC">JISORTFILENAMEASC</option>
+					 <option value="p.imgdate DESC">JISORTPICDATEDESC</option>
+					 <option value="p.imgdate ASC">JISORTPICDATEASC</option>
+					 <option value="p.hits DESC">JISORTHITSDESC</option>
+					 <option value="p.hits ASC">JISORTHITSASC</option>
+					 <option value="rating DESC,p.imgvotesum DESC">JISORTVOTEDESC</option>
+					 <option value="rating ASC,p.imgvotesum ASC">JISORTVOTEASC</option>
+					 <option value="p.imgvotes DESC">JISORTCOUNTVOTESDESC</option>
+					 <option value="p.imgvotes ASC">JISORTCOUNTVOTESASC</option>
+					 <option value="commentrand">JISORTRANDCOMMENTS</option>
+					 <option value="co.cmtdate DESC">JISORTCOMMENTDATEDESC</option>
+					 <option value="co.cmtdate ASC">JISORTCOMMENTDATEASC</option>
+					 <option value="cmtcount DESC">JISORTCOMMCOUNTDESC</option>
+					 <option value="cmtcount ASC">JISORTCOMMCOUNTASC</option>
+					 <option value="n.ndate DESC">JISORTNAMEDATEDESC</option>
+					 <option value="n.ndate ASC">JISORTNAMEDATEASC</option>
+					 <option value="ntcount DESC">JISORTNAMECOUNTDESC</option>
+					 <option value="ntcount ASC">JISORTNAMECOUNTASC</option>      
+				</field>
+			</fieldset>
+			
+			<fieldset name="joomgallery_source" addfieldpath="/administrator/components/com_joomgallery/models/fields"> 
+				<field name="jgallery_catid" type="joomcategory"
+					label="ST_JGALLERY_CATEGORY"
+					description="ST_JGALLERY_CATEGORY_DESC"/>
+				<field name="jgallery_ordering" type="list" default="1" class="btn-group" label="ST_JGALLERY_ORDERING" description="ST_JGALLERY_ORDERING_DESC">
+					 <option value="rand()">JISORTRAND</option>
+					 <option value="p.id DESC">JISORTIDDESC</option>
+					 <option value="p.id ASC">JISORTIDASC</option>
+					 <option value="p.ordering DESC">JISORTORDDESC</option>
+					 <option value="p.ordering ASC">JISORTORDASC</option>
+					 <option value="p.imgtitle DESC">JISORTTITLEDESC</option>
+					 <option value="p.imgtitle ASC">JISORTTITELASC</option>
+					 <option value="p.imgfilename DESC">JISORTFILENAMEDESC</option>
+					 <option value="p.imgfilename ASC">JISORTFILENAMEASC</option>
+					 <option value="p.imgdate DESC">JISORTPICDATEDESC</option>
+					 <option value="p.imgdate ASC">JISORTPICDATEASC</option>
+					 <option value="p.hits DESC">JISORTHITSDESC</option>
+					 <option value="p.hits ASC">JISORTHITSASC</option>
+					 <option value="rating DESC,p.imgvotesum DESC">JISORTVOTEDESC</option>
+					 <option value="rating ASC,p.imgvotesum ASC">JISORTVOTEASC</option>
+					 <option value="p.imgvotes DESC">JISORTCOUNTVOTESDESC</option>
+					 <option value="p.imgvotes ASC">JISORTCOUNTVOTESASC</option>
+					 <option value="commentrand">JISORTRANDCOMMENTS</option>
+					 <option value="co.cmtdate DESC">JISORTCOMMENTDATEDESC</option>
+					 <option value="co.cmtdate ASC">JISORTCOMMENTDATEASC</option>
+					 <option value="cmtcount DESC">JISORTCOMMCOUNTDESC</option>
+					 <option value="cmtcount ASC">JISORTCOMMCOUNTASC</option>
+					 <option value="n.ndate DESC">JISORTNAMEDATEDESC</option>
+					 <option value="n.ndate ASC">JISORTNAMEDATEASC</option>
+					 <option value="ntcount DESC">JISORTNAMECOUNTDESC</option>
+					 <option value="ntcount ASC">JISORTNAMECOUNTASC</option>      
+				</field>
+			</fieldset>
+			
+			<fieldset name="showcase_wall_pinterest">
+				<field name="wall_grid_cols" type="list" default="6" class="btn-group" label="ST_WALL_GRID_COLS" description="ST_WALL_GRID_COLS_DESC">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+				</field>
+				
+				<field name="wall_grid_cols_320" type="list" default="1" class="btn-group" label="ST_WALL_GRID_COLS_320" description="ST_WALL_GRID_COLS_320_DESC">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+				</field>
+				
+				<field name="wall_grid_cols_480" type="list" default="2" class="btn-group" label="ST_WALL_GRID_COLS_480" description="ST_WALL_GRID_COLS_480_DESC">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+				</field>
+				
+				<field name="wall_grid_cols_767" type="list" default="3" class="btn-group" label="ST_WALL_GRID_COLS_767" description="ST_WALL_GRID_COLS_767_DESC">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+				</field>
+				
+				<field name="wall_item_width" type="list" default="1" class="btn-group" label="ST_WALL_ITEM_WIDTH" description="ST_WALL_ITEM_WIDTH">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+				</field>
+				<field 
+					name="wall_category"
+					class="btn-group"
+					type="radio"
+					default="0"
+					label="ST_WALL_CATEGORY"
+					description="ST_WALL_CATEGORY_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>	
+				</field>
+				
+				<field name="wall_style" hide_default="true" filter=".css$" type="filelist" directory="modules/mod_st_content_showcase/exts/wall/styles" default="none" label="ST_WALL_STYLE" description="ST_WALL_STYLE_DESC">
+				</field>
+				
+				<field 
+					name="wall_modal"
+					class="btn-group"
+					type="radio"
+					default="0"
+					label="ST_WALL_MODAL"
+					description="ST_WALL_MODAL_DESC">
+					<option value="0">JNO</option>
+					<option  value="1">JYES</option>	
+				</field>
+				
+			</fieldset>
+			<fieldset name="showcase_accordion">
+				<field
+					name="accoridion_cols" type="list" default="3"
+					label="ST_NEWS_HORIZONAL_COLS"
+					description="ST_NEWS_HORIZONAL_COLS_DESC"
+					class="btn-group"
+					>
+					<option value="12">1</option>
+					<option value="6">2</option>
+					<option value="4">3</option>
+					<option value="3">4</option>
+					<option value="2">6</option>
+				</field>
+			</fieldset>
+			<fieldset name="showcase_news_horizonal">
+				<field
+					name="news_horizonal_cols" type="list" default="3"
+					label="ST_NEWS_HORIZONAL_COLS"
+					description="ST_NEWS_HORIZONAL_COLS_DESC"
+					class="btn-group"
+					>
+					<option value="12">1</option>
+					<option value="6">2</option>
+					<option value="4">3</option>
+					<option value="3">4</option>
+					<option value="2">6</option>
+				</field>
+				<field name="news_horizonal_readmore" type="text" default="" 
+					label="ST_NEWS_HORIZONAL_READMORE"
+					description="ST_NEWS_HORIZONAL_READMORE_DESC"/>
+				<field name="news_horizonal_pre_text" type="textarea" cols="40" rows="5" filter="raw"
+					label="ST_NEWS_HORIZONAL_PRE_TEXT"
+					description="ST_NEWS_HORIZONAL_PRE_TEXT_DESC"/>
+				<field
+					name="news_horizonal_image" type="radio" default="1"
+					class="btn-group"
+					label="ST_NEWS_HORIZONAL_IMAGE"
+					description="ST_NEWS_HORIZONAL_IMAGE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field
+					name="news_horizonal_date" type="radio" default="1"
+					class="btn-group"
+					label="ST_NEWS_HORIZONAL_DATE"
+					description="ST_NEWS_HORIZONAL_DATE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field 
+					name="news_horizonal_modal"
+					class="btn-group"
+					type="radio"
+					default="0"
+					label="ST_WALL_MODAL"
+					description="ST_WALL_MODAL_DESC">
+					<option value="0">JNO</option>
+					<option  value="1">JYES</option>	
+				</field>
+			</fieldset>
+			<fieldset name="showcase_flexslider">
+				<field
+					name="flex_width" type="text" default="100%"
+					label="ST_FLEX_WIDTH"
+					description="ST_FLEX_WIDTH_DESC"
+					/>
+				<field
+					name="flex_animation" type="radio" default="slide"
+					class="btn-group"
+					label="ST_FLEX_ANIMATION"
+					description="ST_FLEX_ANIMATION_DESC">
+					<option value="fade">Fade</option>
+					<option value="slide">Slide</option>
+				</field>
+				
+				<field
+					name="flex_direction" type="radio" default="horizontal"
+					class="btn-group"
+					label="ST_FLEX_DIRECTION"
+					description="ST_FLEX_DIRECTION_DESC">
+					<option value="horizontal">Horizontal</option>
+					<option value="vertical">Vertical</option>
+				</field>
+				
+				<field
+					name="flex_animationLoop" type="radio" default="1"
+					class="btn-group"
+					label="ST_FLEX_LOOP"
+					description="ST_FLEX_LOOP_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field
+					name="flex_smoothHeight" type="radio" default="0"
+					class="btn-group"
+					label="ST_FLEX_SMOOTH_HEIGHT"
+					description="ST_FLEX_SMOOTH_HEIGHT_DESC">
+					<option  value="0">JNO</option>
+					<option  value="1">JYES</option>
+				</field>
+				
+				<field
+					name="flex_slideshow" type="radio" default="1"
+					class="btn-group"
+					label="ST_FLEX_START_AUTO"
+					description="ST_FLEX_START_AUTO_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="flex_slideshowSpeed" type="text" default="7000"
+					class="btn-group"
+					label="ST_FLEX_SLIDESHOW_SPEED"
+					description="ST_FLEX_SLIDESHOW_SPEED_DESC">
+				</field>
+				
+				<field
+					name="flex_animationSpeed" type="text" default="600"
+					label="ST_FLEX_ANIMATION_SPEED"
+					description="ST_FLEX_ANIMATION_SPEED_DESC">
+				</field>
+				
+				<field
+					name="flex_initDelay" type="text" default="0"
+					label="ST_FLEX_DELAY_SPEED"
+					description="ST_FLEX_DELAY_SPEED_DESC"/>
+				
+				<field
+					name="flex_pauseOnAction" type="radio" default="1"
+					class="btn-group"
+					label="ST_FLEX_PAUSE_ACTION"
+					description="ST_FLEX_PAUSE_ACTION_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="flex_pauseOnHover" type="radio" default="0"
+					class="btn-group"
+					label="ST_FLEX_PAUSE_HOVER"
+					description="ST_FLEX_PAUSE_HOVER_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="flex_useCSS" type="radio" default="1"
+					class="btn-group"
+					label="ST_FLEX_CSS3"
+					description="ST_FLEX_CSS3_DESC">
+					<option  value="0">JNO</option>
+					<option  value="1">JYES</option>
+				</field>
+				
+				<field
+					name="flex_touch" type="radio" default="1"
+					class="btn-group"
+					label="ST_FLEX_TOUCH"
+					description="ST_FLEX_TOUCH_DESC">
+					<option  value="0">JNO</option>
+					<option  value="1">JYES</option>
+				</field>
+				
+				<field
+					name="flex_controlNav" type="radio" default="1"
+					class="btn-group"
+					label="ST_FLEX_CONTROL_NAV"
+					description="ST_FLEX_CONTROL_NAV_DESC">
+					<option  value="0">JNO</option>
+					<option  value="1">JYES</option>
+				</field>
+				
+				<field
+					name="flex_directionNav" type="radio" default="1"
+					class="btn-group"
+					label="ST_FLEX_DIREC_NAV"
+					description="ST_FLEX_DIREC_NAV_DESC">
+					<option  value="0">JNO</option>
+					<option  value="1">JYES</option>
+				</field>
+				
+				<field
+					name="flex_preText" type="text" default="Preview"
+					label="ST_FLEX_PRE_TEXT"
+					description="ST_FLEX_PRE_TEXT_DESC"/>
+				<field
+					name="flex_nextText" type="text" default="Next"
+					label="ST_FLEX_NEXT_TEXT"
+					description="ST_FLEX_NEXT_TEXT_DESC"/>
+					
+				<field
+					name="flex_keyboard" type="radio" default="1"
+					class="btn-group"
+					label="ST_FLEX_KEYBOARD"
+					description="ST_FLEX_KEYBOARD_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="flex_multipleKeyboard" type="radio" default="0"
+					class="btn-group"
+					label="ST_FLEX_MULTI_KEYBOARD"
+					description="ST_FLEX_MULTI_KEYBOARD_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="flex_mousewheel" type="radio" default="0"
+					class="btn-group"
+					label="ST_FLEX_MOUSE_WHEEL"
+					description="ST_FLEX_MOUSE_WHEEL_DESC">
+					<option  value="0">JNO</option>
+					<option  value="1">JYES</option>
+				</field>
+				
+				<field
+					name="flex_pausePlay" type="radio" default="0"
+					class="btn-group"
+					label="ST_FLEX_PAUSE_PLAY"
+					description="ST_FLEX_PAUSE_PLAY_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="flex_pauseText" type="text" default=""
+					label="ST_FLEX_PAUSE_TEXT"
+					description="ST_FLEX_PAUSE_TEXT_DESC"/>
+					
+				<field
+					name="flex_playText" type="text" default=""
+					label="ST_FLEX_PLAY_TEXT"
+					description="ST_FLEX_PLAY_TEXT_DESC"/>
+					
+				<field
+					name="flex_itemWidth" type="text" default="0"
+					label="ST_FLEX_ITEM_WIDTH"
+					description="ST_FLEX_ITEM_WIDTH_DESC"/>
+				
+				<field
+					name="flex_minItems" type="text" default="0"
+					label="ST_FLEX_MIN_ITEM"
+					description="ST_FLEX_MIN_ITEM_DESC"/>
+				
+				<field
+					name="flex_maxItems" type="text" default="0"
+					label="ST_FLEX_MAX_ITEM"
+					description="ST_FLEX_MAX_ITEM_DESC"/>
+				
+				<field
+					
+					name="flex_move" type="text" default="0"
+					label="ST_FLEX_MOVE"
+					description="ST_FLEX_MOVE_DESC"/>
+					
+				<field 
+					name="flex_modal"
+					class="btn-group"
+					type="radio"
+					default="0"
+					label="ST_WALL_MODAL"
+					description="ST_WALL_MODAL_DESC">
+					<option value="0">JNO</option>
+					<option  value="1">JYES</option>	
+				</field>
+			</fieldset>
+			<fieldset name="showcase_galleria">
+				<field
+					name="galleria_width" type="text" default="100%"
+					label="ST_GALLERIA_WIDTH"
+					description="ST_GALLERIA_WIDTH_DESC"
+					/>
+				<field
+					name="galleria_height" type="text" default="450px"
+					label="ST_FLEX_HEIGHT"
+					description="ST_FLEX_HEIGHT_DESC"
+					/>
+				<field
+					name="galleria_autoplay" type="text" default="5000"
+					label="ST_GALLERIA_ANIMATION"
+					description="ST_GALLERIA_ANIMATION_DESC" />
+				
+				<field
+					name="galleria_easing" type="text" default="galleria"
+					label="ST_GALLERIA_EASING"
+					description="ST_GALLERIA_EASING_DESC" />
+				
+				<field
+					name="galleria_fullscreenDoubleTap" type="radio" default="1"
+					class="btn-group"
+					label="ST_GALLERIA_FULLSCREEN_DOUBLE_TAP"
+					description="ST_GALLERIA_FULLSCREEN_DOUBLE_TAP_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="galleria_imageCrop" type="list" default="1"
+					class="btn-group"
+					label="ST_GALLERIA_IMAGE_CROP"
+					description="ST_GALLERIA_IMAGE_CROP_DESC">
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+					<option value="height">Height</option>
+					<option value="width">Width</option>
+					<option value="landscape">Landscape</option>
+					<option value="portrait">portrail</option>
+				</field>
+				
+				<field
+					name="galleria_imageMargin" type="text" default="0"
+					label="ST_GALLERIA_IMAGE_MARGIN"
+					description="ST_GALLERIA_IMAGE_MARGIN" />
+				
+				<field
+					name="galleria_imagePan" type="radio" default="true"
+					class="btn-group"
+					label="ST_GALLERIA_IMAGE_PAN"
+					description="ST_GALLERIA_IMAGE_PAN_DESC">
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+				</field>
+				<field
+					name="galleria_imagePanSmoothness" type="text" default="8"
+					label="ST_GALLERIA_IMAGE_PAN_SMOOTHNESS"
+					description="ST_GALLERIA_IMAGE_PAN_SMOOTHNESS_DESC" />
+					
+				<field
+					name="galleria_imagePosition" type="text" default="center"
+					label="ST_GALLERIA_IMAGE_POSITION"
+					description="ST_GALLERIA_IMAGE_POSITION_DESC" />
+				
+				<field
+					name="galleria_initialTransition" type="list" default="slide"
+					class="btn-group"
+					label="ST_GALLERIA_INIT_TRANSITION"
+					description="ST_GALLERIA_INIT_TRANSITION_DESC">
+					<option value="fade">Fade</option>
+					<option value="flash">Flash</option>
+					<option value="pulse">Pulse</option>
+					<option value="slide">Slide</option>
+					<option value="fadeslide">Fadeslide</option>
+				</field>
+				<field
+					name="galleria_transition" type="list" default="fade"
+					class="btn-group"
+					label="ST_GALLERIA_TRANSITION"
+					description="ST_GALLERIA_TRANSITION_DESC">
+					<option value="fade">Fade</option>
+					<option value="flash">Flash</option>
+					<option value="pulse">Pulse</option>
+					<option value="slide">Slide</option>
+					<option value="fadeslide">Fadeslide</option>
+				</field>
+				<field
+					name="galleria_trueFullscreen" type="radio" default="true"
+					class="btn-group"
+					label="ST_GALLERIA_TRUE_FULLSCREEN"
+					description="ST_GALLERIA_TRUE_FULLSCREEN_DESC">
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+				</field>
+				<field
+					name="galleria_transitionSpeed" type="text" default="400"
+					label="ST_GALLERIA_TRANSITION_SPEED"
+					description="ST_GALLERIA_TRANSITION_SPEED_DESC" />
+				<field
+					name="galleria_pauseOnInteraction" type="radio" default="true"
+					class="btn-group"
+					label="ST_GALLERIA_PAUSE_ON"
+					description="ST_GALLERIA_PAUSE_ON">
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+				</field>
+				<field
+					name="galleria_preload" type="text" default="2"
+					label="ST_GALLERIA_PRELOAD"
+					description="ST_GALLERIA_PRELOAD_DESC" />
+				<field
+					name="galleria_pauseOnInteraction" type="radio" default="true"
+					class="btn-group"
+					label="ST_GALLERIA_PAUSE_ON"
+					description="ST_GALLERIA_PAUSE_ON">
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+				</field>
+				<field
+					name="galleria_queue" type="radio" default="true"
+					class="btn-group"
+					label="ST_GALLERIA_QUEUE"
+					description="ST_GALLERIA_QUEUE_DESC">
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+				</field>
+				<field
+					name="galleria_responsive" type="radio" default="true"
+					class="btn-group"
+					label="ST_GALLERIA_RESPONSIVE"
+					description="ST_GALLERIA_RESPONSIVE_DESC">
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+				</field>
+				<field
+					name="galleria_show" type="text" default="0"
+					label="ST_GALLERIA_SHOW"
+					description="ST_GALLERIA_SHOW_DESC" />
+				<field
+					name="galleria_showCounter" type="radio" default="true"
+					class="btn-group"
+					label="ST_GALLERIA_SHOW_COUNTER"
+					description="ST_GALLERIA_SHOW_COUNTER_DESC" >
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+				</field>
+				<field
+					name="galleria_showInfo" type="radio" default="true"
+					class="btn-group"
+					label="ST_GALLERIA_SHOW_INFO"
+					description="ST_GALLERIA_SHOW_INFO_DESC" >
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+				</field>
+				<field
+					name="galleria_showImageNav" type="radio" default="true"
+					class="btn-group"
+					label="ST_GALLERIA_SHOW_IMAGE_NAV"
+					description="ST_GALLERIA_SHOW_IMAGE_NAV_DESC" >
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+				</field>
+				<field
+					name="galleria_swipe" type="radio" default="true"
+					class="btn-group"
+					label="ST_GALLERIA_SWIPE"
+					description="ST_GALLERIA_SWIPE_DESC" >
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+				</field>
+				
+				<field
+					name="galleria_thumbnails" type="list" default="true"
+					class="btn-group"
+					label="ST_GALLERIA_THUMBNAILS"
+					description="ST_GALLERIA_THUMBNAILS_DESC">
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+					<option value="empty">Empty</option>
+					<option value="numbers">Numbers</option>
+					<option value="lazy">Lazy</option>
+				</field>
+				<field
+					name="galleria_thumbMargin" type="text" default="0"
+					label="ST_GALLERIA_THUMB_MARGIN"
+					description="ST_GALLERIA_THUMB_MARGIN_DESC">
+				</field>
+				<field
+					name="galleria_thumbQuality" type="list" default="true"
+					class="btn-group"
+					label="ST_GALLERIA_THUMBNAILS_QUALITY"
+					description="ST_GALLERIA_THUMBNAILS_QUALITY_DESC">
+					<option value="auto">Auto</option>
+					<option value="false">False</option>
+					<option value="true">True</option>
+				</field>
+			</fieldset>
+			<fieldset name="showcase_slider_content">
+				<field
+					name="slider_content_width" type="text" default="100%"
+					label="ST_SLIDER_CONTENT_WIDTH"
+					description="ST_SLIDER_CONTENT_WIDTH_DESC"
+					/>
+				<field
+					name="slider_content_height" type="text" default=""
+					label="ST_SLIDER_CONTENT_HEIGHT"
+					description="ST_SLIDER_CONTENT_HEIGHT_DESC"
+					/>
+				<field
+					name="slider_content_cols" type="text" default="3"
+					label="ST_SLIDER_CONTENT_COLS"
+					description="ST_SLIDER_CONTENT_COLS_DESC"
+					filter="int"
+					/>
+					
+				<field name="slider_content_readmore" type="text" default="" 
+					label="ST_NEWS_HORIZONAL_READMORE"
+					description="ST_NEWS_HORIZONAL_READMORE_DESC"/>
+				<field
+					name="slider_content_image" type="radio" default="1"
+					class="btn-group"
+					label="ST_NEWS_HORIZONAL_IMAGE"
+					description="ST_NEWS_HORIZONAL_IMAGE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field
+					name="slider_content_date" type="radio" default="1"
+					class="btn-group"
+					label="ST_NEWS_HORIZONAL_DATE"
+					description="ST_NEWS_HORIZONAL_DATE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+			<fieldset name="showcase_layer_slider">
+				<field
+					name="layer_slider_width" type="text" default="100%"
+					label="ST_SLIDER_CONTENT_WIDTH"
+					description="ST_SLIDER_CONTENT_WIDTH_DESC"
+					/>
+				<field
+					name="layer_slider_height" type="text" default="300px"
+					label="ST_SLIDER_CONTENT_HEIGHT"
+					description="ST_SLIDER_CONTENT_HEIGHT_DESC"
+					/>
+				<field
+					name="layer_slider_cols" type="list" default="1"
+					class="btn-group"
+					label="ST_NEWS_HORIZONAL_COLS"
+					description="ST_NEWS_HORIZONAL_COLS_DESC"
+					>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</field>
+				<field 
+					name="layer_slider_effects" 
+					label="ST_LAYER_SLIDER_EFFECTS"
+					description="ST_LAYER_SLIDER_EFFECTS_DESC"
+					type="folderlist"
+					hide_default="true"
+					hide_none="true"
+					default="default.css"
+					directory="modules/mod_st_content_showcase/exts/layer_slider/assets/effects" 
+					filter="" exclude="" stripext="" />
+				<field 
+					name="layer_slider_layout" 
+					label="ST_LAYER_SLIDER_LAYOUT"
+					description="ST_LAYER_SLIDER_LAYOUT_DESC"
+					type="filelist"
+					hide_default="true"
+					hide_none="true"
+					default="_slide.php"
+					directory="modules/mod_st_content_showcase/exts/layer_slider/site" 
+					filter=".php$" exclude="default.php" stripext="" />
+				<field
+					name="layer_slider_html" type="radio" default="true"
+					label="ST_LAYER_SLIDER_HTML"
+					description="ST_LAYER_SLIDER_HTML">
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+				</field>
+				<field
+					name="layer_slider_autoPlay" type="radio" default="true"
+					label="ST_LAYER_SLIDER_AUTO_PLAY"
+					description="ST_LAYER_SLIDER_AUTO_PLAY_DESC">
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+				</field>
+				<field
+					name="layer_slider_autoPlayDelay" type="text" default="3000"
+					label="ST_LAYER_SLIDER_AUTO_PLAY_DELAY"
+					description="ST_LAYER_SLIDER_AUTO_PLAY_DELAY" />
+				<field
+					name="layer_slider_nav" type="radio" default="true"
+					label="ST_LAYER_SLIDER_NAV"
+					description="ST_LAYER_SLIDER_NAV_DESC">
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+				</field>
+				<field
+					name="layer_slider_pagination" type="radio" default="true"
+					label="ST_LAYER_SLIDER_PAGINATION"
+					description="ST_LAYER_SLIDER_PAGINATION_DESC">
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

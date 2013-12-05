@@ -1,0 +1,32 @@
+.layer_layout_testimonals .content {
+	font-size: 16px;
+	font-family: 'cabinitalic';
+	color: #868686;
+	line-height: 160%;
+	padding: 25px 25px 30px 90px;
+}
+.layer_layout_testimonals .content:after {
+	border-left: 17px solid transparent;
+	border-right: 0px solid transparent;
+	left: 40px;
+}
+.layer_layout_testimonals .image {
+	border-radius: 50%;
+	overflow: hidden;
+	height: 65px;
+	width: 65px;
+	margin: 0 0 0 24px;
+}
+.layer_layout_testimonals .column-inner .title {
+	line-height: 24px;
+	font-size: 18px;
+	font-weight: 400;
+	padding-left: 110px;
+}
+.layer_layout_testimonals .column-inner .title a {
+	text-decoration: none;
+	color: #444;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 23px;
+}

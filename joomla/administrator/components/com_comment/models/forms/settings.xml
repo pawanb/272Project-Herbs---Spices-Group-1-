@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addfieldpath="/administrator/components/com_comment/models/fields" >
+	<fields name="basic">
+		<fieldset name="basic" >
+			<field name="include_categories" type="radio" class="btn-group" default="0" label="TITLE_SECTIONS_CATEGORIES" description="INCLUDE_SC_HELP">
+				<option value="0">COM_COMMENT_OPTION_CATEGORY_EXCLUDE</option>
+				<option value="1">COM_COMMENT_OPTION_CATEGORY_INCLUDE</option>
+			</field>
+
+			<field name="categories" type="componentcategories" label="EXCLUDE_CATEGORIES_CAPTION"
+				   class="chzn-none chzn-done"
+				   description="EXCLUDE_CATEGORIES_HELP" multiple="multiple" />
+
+			<field name="exclude_content_items" type="text" label="EXCLUDE_CONTENTITEMS_CAPTION"
+				   description="EXCLUDE_CONTENTITEMS_HELP" />
+
+			<field name="disable_additional_comments" type="text" label="DISABLE_ADDITIONAL_COMMENTS_CAPTION"
+				   description="DISABLE_ADDITIONAL_COMMENTS_HELP" />
+		</fieldset>
+	</fields>
+
+	<fields name="security">
+		<fieldset name="security" label="COM_COMMENT_MODERATION_FIELDSET_LABEL">
+			<field name="authorised_users" type="usergroup"  default="1" label="COM_COMMENT_AUTHORISED_POST_CAPTION"
+			       multiple="true" description="COM_COMMENT_AUTHORISED_POST_DESC" />
+			<field name="auto_publish" type="radio" class="btn-group" default="1" label="AUTOPUBLISH_CAPTION" description="AUTOPUBLISH_HELP">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="notify_moderators" type="radio" class="btn-group" default="0" label="NOTIFY_MODERATOR_CAPTION" description="NOTIFY_MODERATOR_HELP">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="moderators" type="usergroup" class="" label="MODERATOR_CAPTION"
+				   multiple="multiple" default="8"
+				   description="MODERATOR_HELP" />
+			<field name="content_creator" type="radio" class="btn-group" default="0" label="COM_COMMENT_CONTENT_CREATOR_MODERATOR_LABEL" description="COM_COMMENT_CONTENT_CREATOR_MODERATOR_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		</fieldset>
+		<fieldset name="captcha" label="COM_COMMENT_ANTISPAM_FIELDSET_LABEL">
+			<field name="captcha" type="radio" class="btn-group" default="0" label="CAPTCHA_CAPTION"
+				   description="CAPTCHA_HELP">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="captcha_type" type="list" class="chzn-none chzn-done ccomment-pro" default="default" label="CAPTCHA_TYPE_CAPTION"
+				   description="CAPTCHA_TYPE_HELP">
+				<option value="default">CAPTCHA_TYPE_DEFAULT</option>
+				<option value="recaptcha" disabled="true">CAPTCHA_TYPE_RECAPTCHA</option>
+			</field>
+			<field name="recaptcha_public_key" disabled="true" class="ccomment-pro"
+			       type="text" label="RECAPTCHA_PUBKEY_CAPTION"
+				   description="RECAPTCHA_PUBKEY_HELP" />
+			<field name="recaptcha_private_key" disabled="true" class="ccomment-pro"
+			       type="text" label="RECAPTCHA_PRVKEY_CAPTION"
+				   description="RECAPTCHA_PRVKEY_HELP" />
+			<field name="captcha_usertypes" type="usergroup" class="chzn-choices" label="CAPTCHA_USERTYPES_CAPTION"
+				   multiple="multiple"
+				   description="CAPTCHA_USERTYPES_HELP" />
+
+		</fieldset>
+		<fieldset name="restrictions" label="COM_COMMENT_RESTRICTIONS_FIELDSET_LABEL">
+			<field name="maxlength_text" type="text" label="MAXLENGTH_TEXT_CAPTION"
+				   description="MAXLENGTH_TEXT_HELP" default="30000" />
+		</fieldset>
+	</fields>
+
+	<fields name="layout">
+		<fieldset name="posting_basic" label="COM_COMMENT_POSTING_BASIC_LABEL">
+			<field name="tree" type="radio" class="btn-group" default="0" label="TREE_CAPTION"
+			       description="TREE_HELP">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+				<option value="2">COM_COMMENT_MODERATORS_TREE_ONLY</option>
+			</field>
+			<field name="sort" type="list" default="0" label="SORT_DOWNWARD_CAPTION"
+			       description="SORT_DOWNWARD_HELP">
+				<option value="0">SORT_DOWNWARD_VALUE_LAST</option>
+				<option value="1">SORT_DOWNWARD_VALUE_FIRST</option>
+			</field>
+			<field name="comments_per_page" type="text" label="DISPLAY_NUM_CAPTION"
+			       description="DISPLAY_NUM_HELP" default="0" />
+			<field name="support_ubb" type="radio" class="btn-group" default="1" label="SUPPORT_UBBCODE_CAPTION"
+			       description="SUPPORT_UBBCODE_HELP">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="support_pictures" type="radio" class="btn-group" default="0"
+			       label="SUPPORT_PICTURES_CAPTION"
+			       description="SUPPORT_PICTURES_HELP">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="pictures_maxwidth" type="text" label="PICTURES_MAXWIDTH_CAPTION"
+			       description="PICTURES_MAXWIDTH_HELP" default="200" />
+			<field name="voting_visible" type="radio" class="btn-group" default="1"
+			       label="VOTING_VISIBLE_CAPTION"
+			       description="VOTING_VISIBLE_HELP">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="use_name" type="radio" class="btn-group" default="0"
+			       label="USE_NAME_CAPTION"
+			       description="USE_NAME_HELP">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="date_format" type="text" label="DATE_FORMAT_CAPTION"
+			       description="DATE_FORMAT_HELP" default="age" />
+			<field name="show_copyright" type="radio" class="btn-group" default="1"
+			       label="COM_COMMENT_SHOW_COPYRIGHT_LABEL"
+			       description="COM_COMMENT_SHOW_COPYRIGHT_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		</fieldset>
+		<fieldset name="layout_frontpage" label="COM_COMMENT_FRONTPAGE_LABEL">
+			<field name="show_readon" type="radio" class="btn-group" default="1"
+				   label="SHOW_READON_CAPTION"
+				   description="SHOW_READON_HELP">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="menu_readon" type="radio" class="btn-group" default="0"
+				   label="MENU_READON_CAPTION"
+				   description="MENU_READON_HELP">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="intro_only" type="radio" class="btn-group" default="0"
+				   label="INTRO_ONLY_CAPTION"
+				   description="INTRO_ONLY_HELP">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		</fieldset>
+		<fieldset name="layout_emoticons" label="COM_COMMENT_EMOTICONS_LABEL">
+			<field name="support_emoticons" type="radio" class="btn-group" default="1"
+				   label="SUPPORT_EMOTICONS_CAPTION"
+				   description="SUPPORT_EMOTICONS_HELP">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="emoticon_pack" type="emoticons"
+			       default="default"
+			       label="EMOTICON_PACK_CAPTION"
+				   description="" class="chzn-none chzn-done"/>
+		</fieldset>
+	</fields>
+
+	<fields name="template">
+		<fieldset name="template"  >
+			<field name="template" type="templates" class="chzn-none chzn-done" default="default"
+				   label="COM_COMMENT_TEMPLATE_LABEL"
+				   description="COM_COMMENT_TEMPLATE_DESC" />
+		</fieldset>
+	</fields>
+	<fields name="integrations">
+		<fieldset name="integrations">
+			<field name="gravatar" type="radio" class="btn-group" default="1"
+				   label="GRAVATAR_CAPTION"
+				   description="GRAVATAR_HELP">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="akismet_use" type="radio" class="btn-group ccomment-pro" default="0"
+					label="AKISMET_USE"
+					description="AKISMET_HELP">
+				<option value="0">JNO</option>
+				<option value="1" disabled="true">JYES</option>
+			</field>
+			<field name="akismet_key" disabled="true" class="ccomment-pro" type="text" label="AKISMET_KEY"
+				   description="AKISMET_KEY_HELP" default="" />
+			<field name="support_profiles" type="profiles" class="chzn-none chzn-done ccomment-pro"
+			       disabled="true"
+			       default="0"
+				   components="com_k2,com_community,com_comprofiler, com_kunena"
+				   label="SUPPORT_PROFILES_CAPTION" description="SUPPORT_PROFILES_HELP" />
+
+			<field name="support_avatars" type="avatars" class="chzn-none chzn-done ccomment-pro"
+			       disabled="true"
+			       default="0"
+				   components="com_k2,com_community,com_comprofiler,com_kunena"
+				   label="SUPPORT_AVATARS_CAPTION" description="SUPPORT_AVATARS_HELP" />
+		</fieldset>
+
+	</fields>
+</form>

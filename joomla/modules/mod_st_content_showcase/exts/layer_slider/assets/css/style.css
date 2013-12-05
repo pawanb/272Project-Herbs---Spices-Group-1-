@@ -1,0 +1,131 @@
+.st-layer-slider {
+	position: relative;
+}
+
+/*========= NAV =======*/
+.sequence-pagination {
+	list-style: none;
+	text-align: center;
+	margin: 0;
+	position: absolute;
+	display: block;
+	left: 0;
+	right: 0;
+	bottom: 0px;
+	z-index: 100;
+}
+.sequence-pagination li {
+	display: inline-block;
+	margin-right: 8px;
+	cursor: pointer;
+}
+.sequence-pagination li.current span {
+	position: relative;
+}
+.sequence-pagination li.current span:after {
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 8px;
+	width: 8px;
+	border-radius: 50%;
+	background: rgba(0, 0, 0, 0.66);
+	display: block;
+	content: '';
+}
+.sequence-pagination:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.sequence-pagination li span {
+	height: 12px;
+	width: 12px;
+	border-radius: 50%;
+	background: #d7d7d7;
+	box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.28);
+	display: block;
+}
+.sequence-prev,
+.sequence-next {
+	display: inline-block;
+	height: 32px;
+	width: 32px;
+	border-radius: 50%;
+	background: url(icons.png) no-repeat center center #dcdcdc;
+	position: absolute;
+	top: 50%;
+	cursor: pointer;
+	z-index: 100;
+}
+.sequence-prev {
+	left: 0;
+	background-position: center -178px;
+}
+.sequence-next {
+	right: 0;
+	background-position: center -107px;
+}
+.sequence-prev:hover,
+.sequence-next:hover {
+	background-color: #fd7800;
+}
+.sequence-prev:hover {
+	background-position: center -49px;
+}
+.sequence-next:hover {
+	background-position: center 11px;
+}
+.sequence-canvas {
+  	height: 100%;
+  	width: 100%;
+  	margin: 0;
+  	padding: 0;
+}
+.sequence-canvas > li {
+  	position: absolute;
+  	overflow: hidden;
+  	width: 100%;
+  	height: 100%;
+  	z-index: 1;
+  	opacity: 0;
+  	filter: alpha(opacity=0);
+  	-webkit-transition: opacity 1.5s;
+  	-moz-transition: opacity 1.5s;
+  	-ms-transition: opacity 1.5s;
+  	-o-transition: opacity 1.5s;
+  	transition: opacity 1.5s;
+}
+.sequence-canvas > li > * {
+ 	position: absolute;
+ 	height: 100%;
+ 	top: 0;
+ 	
+ 	opacity: 0;
+	filter: alpha(opacity=0);
+	-webkit-transition: opacity 1.5s;
+	-moz-transition: opacity 1.5s;
+  	-ms-transition: opacity 1.5s;
+  	-o-transition: opacity 1.5s;
+  	transition: opacity 1.5s;
+}
+.sequence-canvas > li.animate-in > *,
+.sequence-canvas > li.animate-in {
+	opacity: 1;
+	filter: alpha(opacity=99);
+	-webkit-transition: opacity 1.5s;
+	-moz-transition: opacity 1.5s;
+  	-ms-transition: opacity 1.5s;
+  	-o-transition: opacity 1.5s;
+  	transition: opacity 1.5s;
+}
+.sequence-canvas > li.animate-out > *,
+.sequence-canvas > li.animate-out {
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-webkit-transition: opacity 1.5s;
+	-moz-transition: opacity 1.5s;
+  	-ms-transition: opacity 1.5s;
+  	-o-transition: opacity 1.5s;
+  	transition: opacity 1.5s;
+}

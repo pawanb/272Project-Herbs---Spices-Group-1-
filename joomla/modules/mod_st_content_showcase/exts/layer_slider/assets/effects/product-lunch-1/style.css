@@ -1,0 +1,40 @@
+.layer-effect-product-lunch-1 {
+	margin: 0;
+}
+.layer-effect-product-lunch-1 .sequence-next,
+.layer-effect-product-lunch-1 .sequence-prev {
+	right: 0;
+	top: 0px;
+	border-radius: 0;
+}
+.layer-effect-product-lunch-1 .sequence-prev {
+	right: 40px;
+	left: auto;
+}
+.layer-effect-product-lunch-1 .column-inner {
+	height: 100%;
+	margin: 95px 0;
+}
+.layer-effect-product-lunch-1 .column-inner > .title {
+	position: absolute;
+	top: -10px;
+	left: 0;
+	font-size: 42px;
+	line-height: 140%;
+	margin: 0;
+}
+.layer-effect-product-lunch-1 .column-inner .image img {
+	width: 100%;
+}
+.layer-effect-product-lunch-1 .column-inner .image {
+	overflow: hidden;
+	left: 0;
+	right: 0;
+	margin: auto;
+	bottom: 0;
+	top: 94px;
+	background: #eee;
+}
+.layer-effect-product-lunch-1 .sequence-pagination {
+	bottom: 30px;
+}

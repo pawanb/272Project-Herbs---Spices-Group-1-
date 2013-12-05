@@ -1,0 +1,69 @@
+.flow-left, .flow-right {
+	display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 20px;
+    z-index: 100;
+}
+.flow-left.fade-black {
+	background: url("../images/bg/left-black-trans.png") repeat-y scroll 0 0 transparent;
+    left: 0;
+}
+.flow-left.fade-white {
+	background: url("../images/bg/left-white-trans.png") repeat-y scroll 0 0 transparent;
+    left: 0;
+}
+.flow-right.fade-black {
+	background: url("../images/bg/right-black-trans.png") repeat-y scroll 0 0 transparent;
+    right: 0;
+}
+.flow-right.fade-white {
+	background: url("../images/bg/right-white-trans.png") repeat-y scroll 0 0 transparent;
+    right: 0;
+}
+
+div.demo {
+	background-color:#FFFFFF;
+}
+
+div.wrapper {
+	width: auto; /*600*/
+	padding: 10px;
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+}
+
+#coverflow {
+	display: inline-block;
+	height: 600px;
+	width: 999999px;
+	padding-left: 40px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#coverflow .imageItem {
+	float: left;
+	position: relative;
+	margin: 20px;
+}
+
+#coverflow img {
+	width: 150px;
+	height: 150px;
+	float: left;
+}
+
+.remove-effect {
+	-webkit-transform: none !important;
+	-moz-transform: none !important;
+	-o-transform: none !important;
+}
+
+/*================================= FRONT END =======================================*/
+.jsn-themeflow-seocontent {
+	display: none;
+}

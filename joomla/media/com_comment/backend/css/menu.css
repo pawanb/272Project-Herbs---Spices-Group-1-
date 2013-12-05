@@ -1,0 +1,55 @@
+.submenu-box { background: #f6f6f6; margin-bottom: 10px; }
+.submenu-box .padding { padding: 0px;}
+
+div.submenu-box div.t {
+background:url("../images/j_border.png") repeat-x scroll 0 0 transparent;
+}
+div.submenu-box div.t div.t {
+background:url("../images/j_crn_tr_dark.png") no-repeat scroll 100% 0 transparent;
+}
+div.submenu-box div.t div.t div.t {
+background:url("../images/j_crn_tl_dark.png") no-repeat scroll 0 0 transparent;
+}
+div.submenu-box div.b {
+background:url("../images/j_border.png") repeat-x scroll 0 100% transparent;
+}
+div.submenu-box div.b div.b {
+background:url("../images/j_crn_br_dark.png") no-repeat scroll 100% 0 transparent;
+}
+div.submenu-box div.b div.b div.b {
+background:url("../images/j_crn_bl_dark.png") no-repeat scroll 0 0 transparent;
+}
+
+/* submenu styling */
+.submenu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.submenu li {
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+
+.submenu li a,
+.submenu span.nolink {
+	cursor: pointer;
+	padding: 0px 15px;
+	border-right: 1px solid #ccc;
+	font-weight: bold;
+	color: #0B55C4;
+	line-height: 12px;
+	height: 12px;
+}
+
+.submenu span.nolink {
+	color: #999;
+}
+
+.submenu a.active,
+.submenu span.nolink.active {
+	color: #000;
+	text-decoration: underline;
+}

@@ -1,0 +1,215 @@
+/**
+* @author    JoomlaShine.com http://www.joomlashine.com
+* @copyright Copyright (C) 2008 - 2011 JoomlaShine.com. All rights reserved.
+* @license   JoomlaShine.com Proprietary License
+*/
+/* ============================== DEFAULT HTML ============================== */
+::selection {
+	background: #9bb167;
+	color: #fff;
+}
+::-moz-selection {
+	background: #9bb167;
+	color: #fff;
+}
+::-webkit-selection {
+	background: #9bb167;
+	color: #fff;
+}
+a {
+	color: #a8b729;
+}
+a:hover, a:active {
+	color: #859230;
+}
+/* ============================== LAYOUT ============================== */
+/* =============== LAYOUT - OVERALL PAGE =============== */
+#jsn-header {
+	border-top-color: #5f631e;
+}
+#jsn-usermodules3 {
+	background-color: #7d8d34;
+	border-top-color: #5f631e;
+}
+#jsn-usermodules3 a {
+	color: #454d12;
+}
+/* ============================== TYPOGRAPHY ============================== */
+/* =============== TYPOGRAPHY - LINK STYLES =============== */
+/* ----- ACTION LINK ----- */
+.link-action {
+	border-bottom: 1px solid #a8b729;
+}
+.link-action:hover {
+	background-color: #a8b729;
+}
+/* =============== TYPOGRAPHY - TABLE STYLES =============== */
+/* ----- COLOR HEADER TABLE ----- */
+table.style-colorheader thead th {
+	background-color: #598321;
+	border-right: 1px groove #74AA2B;
+}
+/* ----- COLOR STRIPES TABLE ----- */
+table.style-colorstripes td,
+table.style-colorstripes th {
+	border-bottom: 1px solid #81BD2F;
+	border-right: 1px groove #81BD2F;
+}
+table.style-colorstripes thead th {
+	background-color: #47681A;
+}
+table.style-colorstripes thead th.highlight {
+	background-color: #598321;
+}
+table.style-colorstripes tbody tr {
+	background-color: #6A9C27;
+}
+table.style-colorstripes tbody .highlight {
+	background-color: #E8F4D7;
+}
+table.style-colorstripes tbody tr.odd {
+	background-color: #598321;
+}
+table.style-colorstripes tbody tr.odd .highlight {
+	background-color: #D6EDB6;
+}
+table.style-colorstripes tbody tr:hover th,
+table.style-colorstripes tbody tr:hover td {
+	background-color: #4E721D;
+}
+table.style-colorstripes tbody tr:hover .highlight {
+	background-color: #CCE9A5;
+}
+table.style-colorstripes tbody td,
+table.style-colorstripes tbody th {
+	border-left: none;
+	border-right: 1px solid #81BD2F;
+}
+table.style-colorstripes tfoot th,
+table.style-colorstripes tfoot td {
+	background-color: #47681A;
+}
+.sectiontableheader {
+	background-color: #5f9936;
+}
+/* ----- GREY STRIPES TABLE ----- */
+table.style-greystripes thead th.highlight {
+	background-color: #598321;
+}
+/* ============================== MENU ============================== */
+/* =============== MENU - MAIN MENU =============== */
+/* ----- 1st LEVEL ----- */
+div.jsn-modulecontainer ul.menu-mainmenu > li:hover > a,
+div.jsn-modulecontainer ul.menu-mainmenu > li.active > a,
+#jsn-menu .jsn-modulecontainer[class*="display-"] .jsn-modulecontainer_inner:hover h3.jsn-moduletitle {
+	color: #869830;
+	border-top: 1px solid #869445;
+} 
+div.jsn-modulecontainer ul.menu-mainmenu ul li a,
+#jsn-menu #jsn-pos-mainmenu div.display-dropdown.jsn-modulecontainer .jsn-modulecontent {
+	color: #8d9b2f;
+}
+/* ----- HOVER STATE ----- */
+div.jsn-modulecontainer ul.menu-mainmenu ul li:hover > a {
+	background-color: #a3af50;
+}
+/* ----- ACTIVE STATE ----- */
+div.jsn-modulecontainer ul.menu-mainmenu ul li.active > a {
+	background-color: #a3af50;
+}
+/* =============== MENU - TREE MENU =============== */
+/* ----- CURRENT / HOVER STATE ----- */
+div[class*="richbox-"] ul.menu-treemenu li a:hover,
+div[class*="richbox-"] ul.menu-treemenu li a.current {
+	background-color: #6B7527;
+}
+div.lightbox-2 ul.menu-treemenu li a:hover,
+div.lightbox-2 ul.menu-treemenu li a.current {
+	background-color: #94A34F;
+}
+/* =============== MENU - SIDE MENU =============== */
+/* ---------- 1st LEVEL ---------- */
+div.jsn-modulecontainer ul.menu-sidemenu ul li:hover > a,
+div.jsn-modulecontainer ul.menu-sidemenu ul li.active > a,
+div.jsn-modulecontainer ul.menu-sidemenu ul li.parent.active > a {
+	background-color: #A3AF50;
+}
+/* ----- HOVER STATE IN SPECIFIC MODULE BOXES ----- */
+div.lightbox-2 ul.menu-sidemenu > li:hover > a {
+	background-color: #A3AF50;
+}
+div[class*="richbox-"] ul.menu-sidemenu > li:hover > a {
+	background-color: #414812;
+}
+/* ----- ACTIVE STATE IN SPECIFIC MODULE BOXES ----- */
+div.lightbox-2 ul.menu-sidemenu > li.active > a {
+	background-color: #A3AF50;
+}
+div[class*="richbox-"] ul.menu-sidemenu > li.active > a {
+	background-color: #414812;
+}
+/* ============================== SITE TOOLS ============================== */
+/* =============== SITE TOOLS - GENERAL PRESENTATION =============== */
+/* ----- DROP DOWN ----- */
+ul#jsn-sitetools-menu:hover,
+ul#jsn-sitetools-menu li ul,
+ul#jsn-sitetools-inline {
+	background: url(../../images/colors/green/green-pattern.png);
+}
+ul#jsn-sitetools-menu > li > a {
+	background-color: #859634;
+}
+/* ============================== MODULE STYLES ============================== */
+/* =============== MODULE STYLES - MODULE BOXES =============== */
+/* ----- SOLIDBOX STYLE ----- */
+div.solid-1 div.jsn-modulecontainer_inner {
+	background: url(../../images/colors/green/greendark-pattern.png);
+}
+div.solid-2 div.jsn-modulecontainer_inner {
+	background: url(../../images/colors/green/green-pattern.png);
+}
+div.solid-3 div.jsn-modulecontainer_inner {
+	background: url(../../images/colors/green/light-pattern.png);
+}
+div.solid-3 .link-action {
+	color: #A8B729 !important;
+}
+div.solid-3 .link-action:hover {
+	color: #FFF !important;
+}
+/* ----- RICHBOX STYLE ----- */
+div[class*="richbox-"] div.jsn-modulecontainer_inner {
+	background: url(../../images/colors/green/green-pattern.png);
+}
+div.richbox-2 h3.jsn-moduletitle,
+div.richbox-1 div.jsn-modulecontent {
+	background: url(../../images/colors/green/greendark-pattern.png);
+}
+/* ----- LIGHTBOX STYLE ----- */
+div[class*="lightbox-"] div.jsn-modulecontainer_inner {
+	background: url(../../images/colors/green/light-pattern.png);
+}
+div[class*="lightbox-"] div.jsn-modulecontent {
+	border: 1px solid #d3d8c4;
+}
+div.lightbox-1 h3.jsn-moduletitle {
+	background: url(../../images/colors/green/green-pattern.png);
+}
+div.lightbox-2 h3.jsn-moduletitle {
+	background: url(../../images/colors/green/greendark-pattern.png);
+}
+div.lightbox-3 h3.jsn-moduletitle,
+div.lightbox-3 div.jsn-modulecontent {
+	border: 1px solid #d3d8c4;
+}
+/* ============================== JOOMLA! DEFAULT EXTENSIONS ============================== */
+/* =============== JOOMLA! EXTENSIONS - MOD_SEARCH =============== */
+#jsn-pos-top div.search input#mod_search_searchword {
+	border: 1px solid #477328;
+}
+/* =============== JOOMLA! EXTENSIONS - COM_CONTENT =============== */
+/* ----- SECTION / CATEGORY BLOG LAYOUT ----- */
+/* PAGE PAGINATION */
+ul.jsn-pagination li.navigation-page span {
+	background-color: #598321;
+}

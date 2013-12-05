@@ -1,0 +1,82 @@
+/*==================================== BACK END =================================*/
+#jsn-is-themestrip {
+	margin-right:5px; 
+}
+#jsn-is-themestrip .strip-param-slider {
+    float: left;
+    margin-right: 15px;
+    margin-top: 9px;
+    width: 200px;
+}
+#jsn-is-themestrip .strip-param-slider-value {
+    float: left;
+    margin-top: 6px;
+}
+#caption_background_color {
+	float: left;
+}
+.jsn-showcase-theme-settings {
+	padding: 10px;
+	margin-top: 15px;
+	border: 1px solid #CCC;
+	background-color: #F9F9F9;
+	width: 100%;
+	height: 390px;
+}
+.jsn-showcase-theme-settings .color-selector {
+	position: relative;
+	width: 36px;
+	height: 36px;
+	background: url(../../images/select.png);
+	float: left;
+	top: -2px;
+	left: 10px;
+	cursor: pointer;
+}
+.jsn-showcase-theme-settings .color-selector div {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 30px;
+	height: 30px;
+	background: url(../../images/select.png) center;
+}
+.jsn-showcase-theme-settings #themestrip-container-tab #container_background_color,
+.jsn-showcase-theme-settings #themestrip-container-tab #container_border_color,
+.jsn-showcase-theme-settings #themestrip-thumbnail-tab #image_border_color,
+.jsn-showcase-theme-settings #themestrip-container-tab #background_color {
+	float: left;
+}
+.jsn-showcase-theme-settings td#jsn-theme-preview-wrapper {
+	width: 570px;
+	vertical-align: top;
+}
+
+.jsn-themestrip-preview-wrapper {
+	width: 550px;
+	margin: 0 auto;
+	padding: 10px;
+}
+.jsn-themestrip-preview-container {
+	width: 530px;
+	position: relative;
+	height: auto;
+	background-color: #606060;
+	padding: 10px;
+}
+
+
+
+.elastislide-horizontal .jsn-themestrip-preview-thumbnails{
+	float: left;
+	text-align:center;
+	overflow:hidden;
+	
+}
+
+.elastislide-vertical .jsn-themestrip-preview-thumbnails{
+	margin: 0 auto;
+	text-align:center;
+	overflow:hidden;
+	
+}

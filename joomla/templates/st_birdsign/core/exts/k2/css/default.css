@@ -1,0 +1,154 @@
+/* USER PAGE */
+#k2Container,
+div.latestItemsUser,
+div.latestItemsCategory {
+	position: relative;
+}
+.k2LatestCommentsBlock {
+	position: relative;
+}
+.k2FeedIcon {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+}
+div.userBlock h2,
+.itemAuthorName,
+div.latestItemsUser h2 {
+	margin: -10px;
+	padding: 0;
+}
+div.userBlock div.userAdditionalInfo  {
+	margin: 0;
+	font-weight: normal;	
+}
+div.userBlock,
+.itemAuthorDetails,
+div.latestItemsUser,
+div.latestItemsCategory {
+	font-weight: normal;
+	font-size: 12px;
+	margin: 0;
+}
+.userItemView,
+div.latestItemView,
+div.itemContainer {
+	padding: 10px 0 15px;
+}
+div.userItemHeader h3.userItemTitle,
+div.tagItemHeader h2.tagItemTitle,
+div.itemHeader h2.itemTitle,
+div.catItemHeader h3.catItemTitle {
+	padding: 0;
+}
+div.userItemCategory,
+div.userItemTagsBlock,
+div.userItemCommentsLink,
+div.userItemReadMore,
+div.latestItemCategory,
+div.latestItemTagsBlock,
+div.tagItemCategory,
+div.tagItemReadMore, 
+div.catItemHeader span.catItemAuthor,
+div.catItemLinks > div{
+	font-size: 12px;
+	padding: 4px 0;
+}
+div.userItemLinks {
+	margin-bottom: 5px;
+}
+/* ITEM */
+.itemHeader,
+.itemRatingBlock,
+div.itemContentFooter,
+div.itemLinks,
+div.latestItemLinks,
+div.catItemLinks {
+	font-size: 11px;
+	margin: 0;
+}
+div.itemToolbar {
+	margin: 0;
+}
+div.itemRatingBlock {
+	padding: 0;
+}
+span.itemImageCaption {
+	text-align: center;
+	float: none;
+}
+div.itemAuthorLatest h3,
+.itemCommentsCounter,
+div.itemCommentsForm h3{
+	font-weight: bold;
+} 
+div.itemAuthorLatest ul li {
+	background: none;
+	border: none;
+}
+div.itemComments ul.itemCommentsList li {
+	background: none;
+	margin: 10px 0 0 0;
+	padding: 10px 0 0 0;
+	font-size: 12px;
+}
+div.itemComments ul.itemCommentsList li img {
+	margin-right: 10px;
+}
+div.itemComments ul.itemCommentsList li span.commentDate,
+div.itemComments ul.itemCommentsList li span.commentAuthorName{
+	font-size: 12px;
+}
+div.itemBackToTop {
+	padding: 10px 0;
+}
+/* Lastest categories */
+.latestItemTitle {
+	margin: 0;
+}
+div.latestItemImageBlock,
+span.tagItemImage  {
+	margin-right: 10px;
+}
+div.groupPrimary {
+	padding-right: 15px;
+}
+.catItemImage img {
+	max-width: 93%;
+}
+/* Module */
+div.k2CategoriesListBlock {
+	margin: 0;
+}
+.k2CategoriesListBlock ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+} 
+.k2CategoriesListBlock ul li {
+	padding: 8px 6px;
+} 
+div.k2LatestCommentsBlock ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+div.k2LatestCommentsBlock ul li {
+	padding: 8px 0;
+}
+div.k2LatestCommentsBlock ul li:first-child {
+	padding-top: 0;
+}
+div.k2LatestCommentsBlock ul li {
+	background: none;
+}
+div.k2LatestCommentsBlock ul li span.lcUsername {
+	display: block;
+	clear: both;
+}
+div.k2LatestCommentsBlock ul li span.lcUsername,
+div.k2LatestCommentsBlock ul li span.lcCommentDate,
+div.k2LatestCommentsBlock ul li span.lcItemTitle,
+div.k2LatestCommentsBlock ul li span.lcItemCategory {
+	font-size: 11px;
+}
